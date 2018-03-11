@@ -1,0 +1,68 @@
+# 微信小程序配置
+'.source.json':
+  '导航栏标题文字内容':
+    'prefix': 'navigationBarTitleText'
+    'body': '"navigationBarTitleText":"$1"'
+
+  '设置全局默认窗口的表现形式':
+    'prefix': 'wxwindow'
+    'body': """
+"window":{//设置默认窗口的表现形式
+  "navigationBarTitleText": "WeChat",
+  "navigationBarTextStyle": "white", // 导航栏标题颜色，仅支持 black/white,默认 white
+  "backgroundTextStyle": "light", //下拉背景字体、loading 图的样式，仅支持 dark/light，默认dark
+  "enablePullDownRefresh":"false",//是否支持下拉刷新 ，不支持的话就直接不写！，默认false
+  "onReachBottomDistance": 50 // 页面上拉触底事件触发时距页面底部距离，默认50px
+}
+"""
+
+  '底部tab或者顶部tab的表现':
+    'prefix': 'wxtabBar'
+    'body': """
+"tabBar": { //底部tab或者顶部tab的表现
+  "color":"#666666", //tab 上的文字默认颜色
+  "selectedColor":"#CF3349", // tab上文字选中时的颜色
+  "backgroundColor": "#fff", // tab的背景色
+  "borderStyle":"white", // tabbar上边框的颜色，仅支持black/white
+  "position":"bottom", // 可选值 bottom、top
+  "list": [{ //设置tab的属性，最少2个，最多5个
+    "pagePath": "pages/index/index", //点击底部tab跳转的路径
+    "text": "首页", //tab按钮上的文字
+    "iconPath":"../img/a.png",//图片路径，icon 大小限制为40kb，建议尺寸为 81px * 81px，当 postion 为 top 时，此参数无效，不支持网络图片
+     "selectedIconPath": "../img/a.png"//选中时的图片路径，icon 大小限制为40kb，建议尺寸为 81px * 81px ，当 postion 为 top 时，此参数无效
+  }, {
+    "pagePath": "pages/logs/logs",
+    "text": "日志"
+  }]
+}
+"""
+
+  '设置各种网络请求的超时时间':
+    'prefix': 'wxnetworkTimeout'
+    'body': """
+"networkTimeout": { //默认都是60000秒一分钟
+  "request": 10000, //请求网络超时时间10000秒
+  "downloadFile": 10000, //链接服务器超时时间10000秒
+  "uploadFile":"10000",//上传图片超时时间10000秒
+  "downloadFile":"10000"//下载图片超时时间10000秒
+}
+"""
+
+  '设置各种网络请求的超时时间':
+    'prefix': 'wxdebug'
+    'body': '"debug": ${1:true} //项目上线后，建议关闭此项，或者不写此项,默认false'
+
+
+  '设置页面默认窗口的表现形式(会覆盖全局配置)':
+    'prefix': 'wxpagewindow'
+    'body': """
+{
+  "navigationBarTitleText": "WeChat",
+	"navigationBarBackgroundColor": "#ffffff",
+	"navigationBarTextStyle":"black", //导航栏标题颜色，仅支持 black/white，默认 white
+	"backgroundTextStyle":"light",//下拉背景字体、loading 图的样式，仅支持 dark/light，默认dark
+	"enablePullDownRefresh":"false",//是否支持下拉刷新 ，不支持的话就直接不写！
+	"disableScroll":false,//  设置true不能上下滚动，true/false，注意！只能在page.json中有效，无法在app.json中设置该项，默认为false
+	"onReachBottomDistance": 50 // 页面上拉触底事件触发时距页面底部距离，默认为50px
+}
+"""

@@ -1,0 +1,145 @@
+'.text.html.mustache':
+	'弹性盒子容器':
+    'prefix': 'flex-wrap'
+    'body': '<view class="flex-wrap">\n\t$1\n</view>'
+
+	'列表渲染':
+	  'prefix': 'wxfor'
+	  'body': '<block wx:for="{{$1}}">\n\t{{index}}:{{item}}\n</block>'
+
+	'条件渲染':
+	  'prefix': 'wxif'
+	  'body': """
+			<block wx:if="{{true}}">
+				<view> view1 </view>
+				<view> view2 </view>
+			</block>
+		"""
+
+	'包含文件':
+	  'prefix': 'wxinclude'
+	  'body': '<include src="${1:header.wxml}"/>'
+
+	'定义模版':
+	  'prefix': 'wxtemplate'
+	  'body': '<template name="$1">\n\t$1\n</template>'
+	  'description': 'WXML提供模板（template）'
+	  'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/template.html'
+
+	'引用模版':
+    'prefix': 'wximport'
+    'body': '<import src="${1:item.wxml}"/>\n<template is="${2:item}" data="{{${3:data}}}"/>'
+
+	# 视图容器 #
+	'视图容器':
+    'prefix': 'view'
+    'body': '<view class="$1">$2</view>'
+
+	'可横向滚动视图区域':
+    'prefix': 'scroll-view-x'
+    'body': """
+			<scroll-view scroll-x="true" id="$1">
+				<!--scroll-view 采用 flex是不起作用的，建议在 scroll-view里再套一层view，对这个view采用flex-->
+				<view class="flex-wrap">
+					<!--wxss 设置子元素 flex: 1 0 50%;height: ...rpx-->
+					<view style="background:green"></view>
+				  <view style="background:red"></view>
+				  <view style="background: yellow;"></view>
+				  <view style="background: blue;"></view>
+				</view>
+			</scroll-view>
+		"""
+
+	'可竖向滚动视图区域':
+    'prefix': 'scroll-view-y'
+    'body': """
+			<!-- 必须通过 WXSS 设置 height -->
+			<scroll-view scroll-y="true" id="$1">
+				<!--wxss 设置子元素height、width-->
+				<view style="background:green"></view>
+				<view style="background:red;"></view>
+				<view style="background: yellow;"></view>
+				<view style="background: blue;"></view>
+			</scroll-view>
+		"""
+
+	'滑块视图容器':
+		'prefix': 'swiper'
+		'body': """
+			<!--请设置navigator、image的宽高、swiper默认宽100%，高150px-->
+			<swiper id="banner" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+			  <block wx:for="{{banner}}">
+			    <swiper-item>
+			      <navigator url="{{item.linkTo}}" hover-class="navigator-hover">
+			        <image src="{{item.imgUrl}}" width="355" height="150"/>
+			      </navigator>
+			    </swiper-item>
+			  </block>
+			</swiper>
+		"""
+
+	# 基础内容 #
+	'图标':
+    'prefix': 'icon'
+    'body': '<!--[size(px)/color(同css)]--><icon type="${1:success}"/>'
+	'成功：用于表示操作顺利达成':
+    'prefix': 'icon-success'
+    'body': '<icon type="success"/>'
+	'图标-suceess_no_circle':
+    'prefix': 'icon-success_no_circle'
+    'body': '<icon type="success_no_circle"/>'
+	'提示：用于表示信息提示':
+    'prefix': 'icon-info'
+    'body': '<icon type="info"/>'
+	'普通警告：用于表示操作后将引起一定后果的情况':
+    'prefix': 'icon-warn-normal'
+    'body': '<icon type="warn" size="93" color="#FFBE00"></icon>'
+	'强烈警告：用于表示操作后将引起严重的不可挽回的后果的情况':
+    'prefix': 'icon-warn'
+    'body': '<icon type="warn" size="93"></icon>'
+	'等待：用于表示等待':
+    'prefix': 'icon-waiting'
+    'body': '<icon type="waiting"/>'
+	'取消：用于表示取消':
+    'prefix': 'icon-cancel'
+    'body': '<icon type="cancel"/>'
+	'下载：用于表示下载':
+    'prefix': 'icon-download'
+    'body': '<icon type="download"/>'
+	'搜索：用于表示搜索':
+    'prefix': 'icon-search'
+    'body': '<icon type="search"/>'
+	'清除：用于表示清除':
+    'prefix': 'icon-clear'
+    'body': '<icon type="clear"/>'
+	'图标-iconfont':
+		'prefix': 'iconfont'
+		'body': '<text class="iconfont icon-$1"></text>'
+	'文本组件':
+    'prefix': 'text'
+    'body': '<text>$1</text>';
+  '图片组件':
+    'prefix': 'image'
+    'body': '<image src="$1"></image>';
+	'输入框':
+		'prefix': 'wxinput'
+		'body': '<input placeholder="$1" auto-focus bindinput="$2"/>'
+	'密码输入框':
+		'prefix': 'wxpassword'
+		'body': '<input placeholder="请输入密码" auto-focus bindinput="" password/>'
+	'按钮':
+    'prefix': 'wxbutton'
+    'body': '<button type="default" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="tap" hover-class="button-hover">default</button>'
+
+	# 导航  #
+	'跳转到新页面（保留当前页面）':
+    'prefix': 'wxnavigator'
+    'body': '<navigator url="/pages/member/address" hover-class="navigator-hover">\n\t${2:在新页面打开}\n</navigator>'
+
+  '在当前页打开（关闭当前页面）':
+    'prefix': 'wxredirect'
+    'body': '<navigator url="$1" open-type="redirect" hover-class="navigator-hover">\n\t${3:在当前页打开}\n</navigator>'
+
+  '跳转到 tabBar 页面，并关闭其他所有非 tabBar 页面':
+    'prefix': 'wxswitchTab'
+    'body': '<navigator url="$1" open-type="switchTab" hover-class="navigator-hover">\n\t${2:切换 Tab}\n</navigator>'
