@@ -1,13 +1,13 @@
 '.source.js':
   '发送 GET 请求的请求头设置':
-		'prefix': 'wxgetheader'
-		'body': "'content-type':'application/json'"
-	'发送 POST 请求的请求头设置':
-		'prefix': 'wxpostheader'
-		'body': "'content-type':'application/x-www-form-urlencoded'"
-	'上传文件请求的请求头设置':
-		'prefix': 'wxfileheader'
-		'body': "'content-type':'multipart/form-data'"
+    'prefix': 'wxgetheader'
+    'body': "'content-type':'application/json'"
+  '发送 POST 请求的请求头设置':
+    'prefix': 'wxpostheader'
+    'body': "'content-type':'application/x-www-form-urlencoded'"
+  '上传文件请求的请求头设置':
+    'prefix': 'wxfileheader'
+    'body': "'content-type':'multipart/form-data'"
   '发起网络请求':
     'prefix': 'wxrequest'
     'body': '''
