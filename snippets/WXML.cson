@@ -33,14 +33,14 @@
 			<template is="${2:目标模板名字}" data="{{${3:传递的数据}}}"/>
 		"""
 		'description': '引用'
-	  'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/import.html'
+		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/import.html'
 	'包含文件':
 	  'prefix': 'include'
 	  'body': '<include src="${1:目标文件路径}"/>'
 		'description': '引用'
-	  'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/import.html'
+		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/import.html'
 # form表单的事件
-'.meta.tag.block.form.html'
+'.meta.tag.block.form.html':
 	'bindsubmit':
 	  'prefix': 'bindsubmit'
 	  'body': 'bindsubmit="$1"'
@@ -48,7 +48,7 @@
 	  'prefix': 'bindreset'
 	  'body': 'bindreset="$1"'
 # 按钮的事件
-'.meta.tag.inline.button.html'
+'.meta.tag.inline.button.html':
 	'bindcontact':
 	  'prefix': 'bindcontact'
 	  'body': 'bindcontact="$1"'
