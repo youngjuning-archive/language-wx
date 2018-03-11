@@ -7,4 +7,4 @@
 
 - 代码来源于官方的 language-xml 和 language-css
 - atom-wx
-- wx-app
+- wxapp
