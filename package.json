@@ -1,0 +1,19 @@
+{
+  "name": "language-wx",
+  "version": "0.0.0",
+  "description": "微信开发必备插件 by youngjuning",
+  "keywords": [
+    "miniapp",
+    "wechat",
+    "wx",
+    "微信小程序",
+    "微信"
+  ],
+  "repository": "https://github.com/youngjuning/language-wx",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}
