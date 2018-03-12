@@ -70,7 +70,7 @@
 		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/button.html'
 	'表单组件->输入框':
 		'prefix': 'input'
-		'body': '<input placeholder="$1" bindinput="$2"/>'
+		'body': '<input value="{{$1}}" placeholder="$2" bindinput="$3"/>'
 		'description': '表单组件->输入框'
 		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/input.html'
 	# 导航

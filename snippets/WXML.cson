@@ -17,6 +17,24 @@
 		"""
 		'description': '条件渲染'
 		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/conditional.html'
+	'条件渲染之else':
+    'prefix': 'else'
+    'body': """
+			<block wx:else>
+				$1
+			</block>
+		"""
+		'description': '条件渲染'
+		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/conditional.html'
+	'条件渲染之elif':
+    'prefix': 'elif'
+    'body': """
+			<block wx:elif>
+				$1
+			</block>
+		"""
+		'description': '条件渲染'
+		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/conditional.html'
 	'定义模板':
 	  'prefix': 'template'
 	  'body': """
@@ -77,3 +95,32 @@
 	'bindconfirm':
 	  'prefix': 'bindconfirm'
 	  'body': 'bindconfirm="$1"'
+# 标签内的代码块
+'.meta.tag.other.html':
+	# 列表渲染
+	'在组件上使用 wx:for 控制属性绑定一个数组':
+	  'prefix': 'for'
+	  'body': 'wx:for="$1"'
+	  'description': '列表渲染'
+	  'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/list.html'
+	'指定数组当前元素的变量名':
+	  'prefix': 'for-item'
+	  'body': 'wx:for-item="$1"'
+	  'description': '列表渲染'
+	  'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/list.html'
+	'指定数组当前元素的变量名':
+	  'prefix': 'for-index'
+	  'body': 'wx:for-index="$1"'
+	  'description': '列表渲染'
+	  'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/list.html'
+	'针对对态列表优化性能':
+	  'prefix': 'key'
+	  'body': 'wx:key="$1"'
+	  'description': '列表渲染'
+	  'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/list.html'
+	# 条件渲染
+	'条件渲染':
+		'prefix': 'if'
+		'body': 'wx:if="${1:\{\{condition\}\}}"'
+		'description': '条件渲染'
+		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/conditional.html'

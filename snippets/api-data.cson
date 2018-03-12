@@ -48,3 +48,13 @@
       }
     })
     '''
+  '同步的本地存储写操作':
+    'prefix': 'wxsetStorageSync'
+    'body': 'wx.setStorageSync(\'$1\', \'$2\')'
+    'description': '这是一个同步接口'
+    'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/data.html#wxsetstorageobject'
+  '同步的本地存储读操作':
+    'prefix': 'wxgetStorageSync'
+    'body': 'wx.getStorageSync(\'$1\')'
+    'description': '这是一个同步接口'
+    'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/data.html#wxgetstoragesynckey'  
