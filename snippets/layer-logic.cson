@@ -1,0 +1,37 @@
+'.source.js':
+	'获取程序实例':
+		'prefix': 'wxgetapp'
+		'body': 'const app = getApp();'
+		'description': '逻辑层->注册程序'
+		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/framework/app-service/app.html'
+	'获取到当前页面的路径':
+    'prefix': 'thisroute'
+    'body': 'this.route;'
+	  'description': '逻辑层->注册页面'
+	  'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/framework/app-service/page.html'
+	'将数据从逻辑层发送到视图层（异步），同时改变对应的 this.data 的值（同步）':
+    'prefix': 'thissetData'
+    'body': """
+      this.setData({
+        ${1:// 这次要改变的数据}
+      })
+    """
+    'description': '逻辑层->注册页面'
+    'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/framework/app-service/page.html'
+	'获取当前页面栈的实例':
+		'prefix': 'wxgetcurrentpages'
+		'body': '//获取当前页面栈的实例\nconst currentPages = getCurrentPages();'
+		'description': '逻辑层->注册页面'
+		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/framework/app-service/page.html'
+	'为当前页面添加方法':
+    'prefix': '.assign'
+    'body': 'assign({},$1,$2)'
+	# 自定义方法
+	'小程序工具提示框':
+		'prefix': 'thisshowTopTips'
+		'body': """
+			this.showTopTips({
+				content: '${1:错误提示}',
+				duration: ${2:3000}
+			});
+		"""
