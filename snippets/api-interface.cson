@@ -17,13 +17,13 @@
     'description': '界面->交互反馈->隐藏消息提示框'
     'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/api-react.html#wxhidetoast'
   '显示 loading 提示框':
-  	'prefix':'wxshowLoading'
-  	'body':"""
-  		wx.showLoading({
+    'prefix': 'wxshowLoading'
+    'body': """
+      wx.showLoading({
   			title: '${1:加载中}',
   			mask: ${2:true}
   		});
-  	"""
+    """
     'description': '界面->交互反馈->显示 loading 提示框'
     'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/api-react.html#wxshowloadingobject'
   '主动隐藏 loading 提示框':
@@ -41,16 +41,16 @@
     'description': '界面->交互反馈->隐藏 loading 提示框'
     'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/api-react.html#wxhideloading'
   '​显示模态弹窗':
-  	'prefix': 'wxshowModal'
-  	'body': """
-  		wx.showModal({
+    'prefix': 'wxshowModal'
+    'body': """
+      wx.showModal({
         title: ${1:提示的标题},
   			content: '${2:提示的内容}',
   			showCancel: ${3:false},
         cancelText: ${4:取消}
   			confirmText: '${5:确定}'
   		});
-  	"""
+    """
     'description': '​界面->交互反馈->显示模态弹窗'
     'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/api-react.html#wxshowmodalobject'
   '​显示操作菜单':
@@ -249,6 +249,16 @@
     """
     'description': '界面->设置->隐藏 tabBar'
     'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/ui-tabbar.html#wxhidetabbarobject'
+  # 设置置顶信息
+  '动态设置置顶栏文字内容':
+    'prefix': 'wxsetTopBarText'
+    'body': """
+      wxsetTopBarText({
+        text: ${1:置顶栏文字内容}
+      });
+    """
+    'description': '动态设置置顶栏文字内容'
+    'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/ui.html#wxsettopbartextobject'
   # 导航
   '新窗口打开页面':
     'prefix': 'wxnavigateTo'

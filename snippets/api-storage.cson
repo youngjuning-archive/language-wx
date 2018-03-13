@@ -1,0 +1,116 @@
+'.source.js':
+  '异步设置本地数据缓存':
+    'prefix': 'wxsetStorage'
+    'body': '''
+    wx.setStorage({
+      key: '${1: String}',
+      data: Object/String,
+      success: function(res){
+        $2// success
+      },
+      fail: function() {
+        $3// fail
+      },
+      complete: function() {
+        $4// complete
+      }
+    })
+    '''
+    'description': '数据缓存->异步设置本地数据缓存'
+    'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/data.html#wxsetstorageobject'
+  '同步设置本地数据缓存':
+    'prefix': 'wxsetStorageSync'
+    'body': """
+      wx.setStorageSync('${1:key}', '${2:value}')
+    """
+    'description': '数据缓存->同步设置本地数据缓存'
+    'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/data.html#wxsetstorageobject'
+  '异步获取本地数据缓存':
+    'prefix': 'wxgetStorage'
+    'body': '''
+    wx.getStorage({
+      key: '${1:String}',
+      success: function(res){
+        ${2:// success}
+      },
+      fail: function() {
+        ${3:// fail}
+      },
+      complete: function() {
+        ${4:// complete}
+      }
+    })
+    '''
+    'description': '数据缓存->异步获取本地数据缓存'
+    'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/data.html#wxsetstoragesynckeydata'
+  '同步的本地存储读操作':
+    'prefix': 'wxgetStorageSync'
+    'body': """
+      wx.getStorageSync('${1:key}')
+    """
+    'description': '数据缓存->从本地缓存中同步获取指定 key 对应的内容'
+    'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/data.html#wxgetstoragesynckey'
+  '异步获取当前storage的相关信息':
+    'prefix': 'wxgetStorageInfo'
+    'body': """
+      wx.getStorageInfo({
+        success: function(res) {
+          console.log(res.keys);// 当前storage中所有的key
+          console.log(res.currentSize);// 当前占用的空间大小，单位kb
+          console.log(res.limitSize);// 限制的空间大小，本地数据存储的大小限制为 10MB
+        }
+      });
+    """
+    'description': '数据缓存->异步获取当前storage的相关信息'
+    'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/data.html#wxgetstorageinfoobject'
+  '同步获取当前storage的相关信息':
+    'prefix': 'wxgetStorageInfoSync'
+    'body': """
+      var storageInfo = wx.getStorageInfoSync()
+    """
+    'description': '数据缓存->同步获取当前storage的相关信息'
+    'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/data.html#wxgetstorageinfoobject'
+  '从本地缓存中异步移除指定key':
+    'prefix': 'wxremoveStorage'
+    'body': """
+      wx.removeStorage({
+        key: '${1:key}',
+        success: function(res){
+          ${1:console.log(res.data);}
+        }
+      });
+    """
+    'description': '数据缓存->从本地缓存中异步移除指定 key'
+    'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/data.html#wxremovestorageobject'
+  '从本地缓存中同步移除指定 key':
+    'prefix': 'wxremoveStorageSync'
+    'body': """
+      wx.removeStorageSync('${1:key}');
+    """
+    'description': '数据缓存->从本地缓存中同步移除指定 key'
+    'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/data.html#wxremovestoragesynckey'
+  '异步清理本地数据缓存':
+    'prefix': 'wxclearStorage'
+    'body': '''
+    wx.clearStorage({
+      key: '${1: String}',
+      success: function(res){
+        $2// success
+      },
+      fail: function() {
+        $3// fail
+      },
+      complete: function() {
+        $4// complete
+      }
+    })
+    '''
+    'description': '数据缓存->清理本地数据缓存'
+    'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/data.html#wxclearstorage'
+  '同步清理本地数据缓存':
+    'prefix': 'wxclearStorageSync'
+    'body': """
+      wx.clearStorageSync()
+    """
+    'description': '数据缓存->同步清理本地数据缓存'
+    'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/data.html#wxclearstoragesync'

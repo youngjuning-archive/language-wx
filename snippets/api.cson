@@ -1,12 +1,4 @@
 # 小程序API
 '.source.js':
 	# 设备
-	'拨打电话':
-	  'prefix': 'wxmakePhoneCall'
-	  'body': """
-wx.makePhoneCall({
-  phoneNumber: '1340000' //仅为示例，并非真实的电话号码
-})
-"""
-  'description': '查看API'
-  'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/phonecall.html'
+	

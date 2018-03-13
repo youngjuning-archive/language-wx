@@ -1,32 +1,44 @@
 '.source.js':
+  # 系统信息
+  '异步获取系统信息':
+    'prefix': 'wxgetSystemInfo'
+    'body': '''
+    wx.getSystemInfo({
+      success: function(res) {
+        ${1:// success}
+      }
+    })
+    '''
+    'description': '设备->系统信息->异步获取系统信息'
+    'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/phonecall.html'
+  '同步获取系统信息':
+    'prefix': 'wxgetSystemInfoSync'
+    'body': 'wx.getSystemInfoSync()'
+    'description': '设备->系统信息->同步获取系统信息'
+    'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/systeminfo.html#wxgetsysteminfoobject'
+  # 网络状态
   '获取网络类型':
     'prefix': 'wxgetNetworkType'
     'body': '''
     wx.getNetworkType({
       success: function(res) {
-        $1// success
+        ${1:// success}
       }
     })
     '''
-  '异步获取系统信息': 
-    'prefix': 'wxgetSystemInfo'
-    'body': '''
-    wx.getSystemInfo({
-      success: function(res) {
-        $1// success
-      }
-    })
-    '''
-  '同步获取系统信息':
-    'prefix': 'wxgetSystemInfoSync'
-    'body': 'wx.getSystemInfoSync()'
-  '监听重力感应数据':
+    'description': '设备->系统信息->同步获取系统信息'
+    'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/systeminfo.html#wxgetsysteminfoobject'
+  # 加速度计
+  '监听加速度数据':
     'prefix': 'wxonAccelerometerChange'
     'body': '''
     wx.onAccelerometerChange(function(res){
-      $1// callback
+      ${1:// callback}
     })
     '''
+    'description': '设备->加速度计->监听加速度计'
+    'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/accelerometer.html'
+  # 罗盘
   '监听罗盘数据':
     'prefix': 'wxonCompassChange'
     'body': '''
@@ -34,3 +46,15 @@
       $1// callback
     })
     '''
+    'description': '设备->罗盘->监听罗盘数据'
+    'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/compass.html#wxoncompasschangecallback'
+  # 拨打电话
+  '拨打电话':
+	  'prefix': 'wxmakePhoneCall'
+	  'body': """
+			wx.makePhoneCall({
+			  phoneNumber: '1340000' //仅为示例，并非真实的电话号码
+			})
+		"""
+    'description': '设备->拨打电话'
+    'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/phonecall.html'

@@ -21,5 +21,8 @@
 
 ## TODO
 
-api-interface 设置置顶信息，位置绘画
-api-data：所有的接口
+- [x] api-interface 设置置顶信息
+- [ ] api-interface 位置绘画
+- [ ] 完善 api-device（设备）
+- [x] api-storage：所有的接口
+- [ ] 完善文档
