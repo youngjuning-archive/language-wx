@@ -1,4 +1,4 @@
-'.text.html.mustache':
+'.text.xml':
 	# 视图容器
 	'视图容器':
     'prefix': 'view'
