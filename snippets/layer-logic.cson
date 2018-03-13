@@ -14,7 +14,7 @@
     'body': """
       this.setData({
         ${1:// 这次要改变的数据}
-      })
+      });
     """
     'description': '逻辑层->注册页面'
     'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/framework/app-service/page.html'
@@ -24,8 +24,8 @@
 		'description': '逻辑层->注册页面'
 		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/framework/app-service/page.html'
 	'为当前页面添加方法':
-    'prefix': '.assign'
-    'body': 'assign({},$1,$2)'
+    'prefix': 'assign'
+    'body': '.assign({},$1,$2)'
 	# 自定义方法
 	'小程序工具提示框':
 		'prefix': 'thisshowTopTips'

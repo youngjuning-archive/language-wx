@@ -12,7 +12,7 @@
     'description': '界面->交互反馈->显示消息提示框'
     'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/api-react.html#wxshowtoastobject'
   '隐藏消息提示框':
-    'prefix': 'wxHideToast'
+    'prefix': 'wxhideToast'
     'body': 'wx.hideToast();'
     'description': '界面->交互反馈->隐藏消息提示框'
     'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/api-react.html#wxhidetoast'
@@ -20,9 +20,9 @@
     'prefix': 'wxshowLoading'
     'body': """
       wx.showLoading({
-  			title: '${1:加载中}',
-  			mask: ${2:true}
-  		});
+      	title: '${1:加载中}',
+      	mask: ${2:true}
+      });
     """
     'description': '界面->交互反馈->显示 loading 提示框'
     'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/api-react.html#wxshowloadingobject'
@@ -31,7 +31,7 @@
     'body':'wx.hideLoading();'
     'description': '界面->交互反馈->隐藏 loading 提示框'
     'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/api-react.html#wxhideloading'
-	'隐藏 loading 提示框':
+  '隐藏 loading 提示框':
     'prefix':'wxhideLoading-timeout'
     'body':"""
       setTimeout(() => {
@@ -44,12 +44,10 @@
     'prefix': 'wxshowModal'
     'body': """
       wx.showModal({
-        title: ${1:提示的标题},
-  			content: '${2:提示的内容}',
-  			showCancel: ${3:false},
-        cancelText: ${4:取消}
-  			confirmText: '${5:确定}'
-  		});
+        title: '${1:提示的标题}',
+        content: '${2:提示的内容}',
+        showCancel: ${3:true}
+      });
     """
     'description': '​界面->交互反馈->显示模态弹窗'
     'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/api-react.html#wxshowmodalobject'
