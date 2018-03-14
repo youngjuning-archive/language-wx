@@ -19,15 +19,15 @@
 - atom-wx
 - wxapp
 
-## TODOLIST
+## TODOS
 
-- [x] api-interface 设置置顶信息
-- [ ] api-interface 位置绘画
-- [ ] 完善 api-device（设备）
-- [x] api-storage：所有的接口
-- [ ] 完善文档
-- [ ] 表单组件、基础内容
-- [ ] 导航
-- [ ] 媒体组件
-- [ ] 小程序插件开发相关插件
-- [x] 发布v0.3.4版本
+- [ ] TODO: 发布v0.3.4版本
+- [x] TODO: api-interface 设置置顶信息
+- [ ] TODO: api-interface 位置绘画
+- [ ] TODO: 完善 api-device（设备）
+- [x] TODO: api-storage：所有的接口
+- [ ] TODO: 完善文档
+- [ ] TODO: 表单组件、基础内容
+- [ ] TODO: 导航
+- [ ] TODO: 媒体组件
+- [ ] TODO: 小程序插件开发相关插件
