@@ -96,7 +96,7 @@
       '5':
         'name': 'entity.name.tag.localname.wxml'
     'end': '(/?>)'
-    'name': 'meta.tag.wxml'
+    'name': 'meta.tag.$5.wxml'
     'patterns': [
       {
         'include': '#tagStuff'

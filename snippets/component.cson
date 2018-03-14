@@ -1,28 +1,86 @@
-'.text.wxml':
-	# 视图容器
-	'视图容器':
-    'prefix': 'view'
-    'body': '<view class="$1">$2</view>'
-		'description': '视图容器'
-		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/view.html'
-	'视图容器->可横向滚动视图区域':
-    'prefix': 'scroll-view-x'
+# 导航组件属性
+'.meta.tag.navigator.wxml':
+  'open-type':
+    'prefix': 'open-type'
+    'body': 'open-type="${1:navigate/redirect/switchTab/reLaunch/navigateBack}"'
+  'hover-class':
+    'prefix': 'hover-class'
+    'body': 'hover-class="${1:none}"'
+  'navigator->delta':
+    'prefix': 'delta'
+    'body': 'delta="1"'
+# 输入框组件属性
+'.meta.tag.input.wxml':
+  '是否是密码类型':
+    'prefix': 'password'
     'body': """
+      password
+    """
+  '是否禁用':
+    'prefix': 'disabled'
+    'body': """
+      disabled
+    """
+  '最大输入长度，设置为 -1 的时候不限制最大长度':
+    'prefix': 'maxlength'
+    'body': """
+      maxlength="140"
+    """
+  '获取焦点':
+    'prefix': 'focus'
+    'body': """
+      focus
+    """
+  'input 的类型':
+    'prefix': 'type'
+    'body': """
+      type="${1:text/number/idcard/digit}"
+    """
+  '设置键盘右下角按钮的文字':
+    'prefix': 'confirm-type'
+    'body': """
+      confirm-type="${1:send/search/next/go/done}"
+    """
+  '当键盘输入时，触发input事件':
+    'prefix': 'bindinput'
+    'body': """
+      bindinput="$1"
+    """
+  '输入框聚焦时触发':
+    'prefix': 'bindfocus'
+    'body': """
+      bindfocus="$1"
+    """
+  '输入框失去焦点时触发':
+    'prefix': 'bindblur'
+    'body': """
+      bindblur="$1"
+    """
+  '点击完成按钮时触发':
+    'prefix': 'bindconfirm'
+    'body': """
+      bindconfirm="$1"
+    """
+'.text.wxml':
+	'视图容器':
+		'prefix': 'wxview'
+		'body': '<view class="$1">$2</view>'
+	'视图容器->可横向滚动视图区域':
+		'prefix': 'wxscroll-view-x'
+		'body': """
 			<scroll-view scroll-x="true" id="$1">
-				<!--scroll-view 采用 flex是不起作用的，建议在 scroll-view里再套一层view，对这个view采用flex-->
-				<view class="weui-flex">
-					<!--wxss 设置子元素 flex: 1 0 50%;height: ...rpx-->
-					<view style="background:green"></view>
-				  <view style="background:red"></view>
-				  <view style="background: yellow;"></view>
-				  <view style="background: blue;"></view>
-				</view>
+			<!--scroll-view 采用 flex是不起作用的，建议在 scroll-view里再套一层view，对这个view采用flex-->
+			<view class="weui-flex">
+				<!--wxss 设置子元素 flex: 1 0 50%;height: ...rpx-->
+				<view style="background:green"></view>
+				<view style="background:red"></view>
+				<view style="background: yellow;"></view>
+				<view style="background: blue;"></view>
+			</view>
 			</scroll-view>
 		"""
-		'description': '视图容器->可滚动视图区域'
-		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/scroll-view.html'
 	'视图容器->可竖向滚动视图区域':
-    'prefix': 'scroll-view-y'
+    'prefix': 'wxscroll-view-y'
     'body': """
 			<!-- 必须通过 WXSS 设置 height -->
 			<scroll-view scroll-y="true" id="$1">
@@ -33,10 +91,8 @@
 				<view style="background: blue;"></view>
 			</scroll-view>
 		"""
-		'description': '视图容器->可滚动视图区域'
-		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/scroll-view.html'
 	'视图容器->滑块视图容器':
-		'prefix': 'swiper'
+		'prefix': 'wxswiper'
 		'body': """
 			<!--请设置navigator、image的宽高、swiper默认宽100%，高150px-->
 			<swiper id="${1:banner}"
@@ -54,33 +110,31 @@
 			  </block>
 			</swiper>
 		"""
-		'description': '视图容器->滑块视图容器'
-		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/swiper.html'
 	# 基础内容
 	'基础内容->图标':
-    'prefix': 'icon'
+    'prefix': 'wxicon'
     'body': '<icon type="${1:success}" size="$2" color="$3"/>'
-		'description': '基础内容->图标'
-		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/icon.html'
+    'description': '基础内容->图标'
+    'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/icon.html'
 	'基础内容->文本':
-    'prefix': 'text'
-    'body': '<text>$1</text>';
+    'prefix': 'wxtext'
+    'body': '<text>$1</text>'
 		'description': '基础内容->文本'
 		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/text.html'
 	# 表单组件
 	'表单组件->按钮':
-		'prefix': 'button'
+		'prefix': 'wxbutton'
 		'body': '<button type="${1:primary}" bindtap="${2:tapEvent}" hover-class="none">primary</button>'
 		'description': '表单组件->按钮'
 		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/button.html'
 	'表单组件->输入框':
-		'prefix': 'input'
+		'prefix': 'wxinput'
 		'body': '<input value="{{$1}}" placeholder="$2" bindinput="$3"/>'
 		'description': '表单组件->输入框'
 		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/input.html'
 	# 导航
 	'导航->navigator':
-    'prefix': 'navigator'
+    'prefix': 'wxnavigator'
     'body': """
 			<navigator url="$1" open-type="${2:navigate}">
 				$3
@@ -88,10 +142,10 @@
 		"""
 	# 媒体组件
 	'媒体组件->图片':
-		'prefix': 'image'
-		'body': '<image src="$1"></image>';
-		'description': '媒体组件->图片'
-		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/image.html'
+    'prefix': 'wximage'
+    'body': '<image src="$1"></image>'
+    'description':'媒体组件->图片'
+    'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/image.html'
 	# 扩展
 	'图标-iconfont':
 		'prefix': 'iconfont'
