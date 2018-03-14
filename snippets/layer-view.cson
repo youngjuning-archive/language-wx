@@ -57,7 +57,7 @@
 	  'body': '<include src="${1:目标文件路径}"/>'
 		'description': '引用'
 		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/import.html'
-'.punctuation.definition.tag.xml':
+'.punctuation.definition.tag.xml,.meta.tag.xml,.meta.tag.no-content.xml':
 	'标签内的条件渲染':
 	  'prefix': 'if'
 	  'body': 'wx:if="\{\{${1:condition}\}\}"'
