@@ -63,22 +63,28 @@
     """
 '.text.wxml':
 	'视图容器':
-		'prefix': 'wxview'
-		'body': '<view class="$1">$2</view>'
+    'prefix': 'wxview'
+    'body': """
+      <view class="$1">$2</view>
+    """
+    'description': '视图容器'
+    'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/view.html'
 	'视图容器->可横向滚动视图区域':
-		'prefix': 'wxscroll-view-x'
-		'body': """
-			<scroll-view scroll-x="true" id="$1">
-			<!--scroll-view 采用 flex是不起作用的，建议在 scroll-view里再套一层view，对这个view采用flex-->
-			<view class="weui-flex">
-				<!--wxss 设置子元素 flex: 1 0 50%;height: ...rpx-->
-				<view style="background:green"></view>
-				<view style="background:red"></view>
-				<view style="background: yellow;"></view>
-				<view style="background: blue;"></view>
-			</view>
-			</scroll-view>
-		"""
+    'prefix': 'wxscroll-view-x'
+    'body': """
+    	<scroll-view scroll-x="true" id="$1">
+    	<!--scroll-view 采用 flex是不起作用的，建议在 scroll-view里再套一层view，对这个view采用flex-->
+    	<view class="weui-flex">
+    		<!--wxss 设置子元素 flex: 1 0 50%;height: ...rpx-->
+    		<view style="background:green"></view>
+    		<view style="background:red"></view>
+    		<view style="background: yellow;"></view>
+    		<view style="background: blue;"></view>
+    	</view>
+    	</scroll-view>
+    """
+    'description': '可滚动视图区域'
+    'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/scroll-view.html'
 	'视图容器->可竖向滚动视图区域':
     'prefix': 'wxscroll-view-y'
     'body': """
