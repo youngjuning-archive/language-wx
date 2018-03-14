@@ -100,7 +100,7 @@
     'description': '可滚动视图区域'
     'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/scroll-view.html'
 	'视图容器->滑块视图容器':
-		'prefix': 'wxswiper'
+    'prefix': 'wxswiper'
     'body': """
     	<!--请设置navigator、image的宽高、swiper默认宽100%，高150px-->
     	<swiper id="${1:banner}"
