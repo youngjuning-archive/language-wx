@@ -8,15 +8,15 @@
     'begin': '(<\\?)\\s*([-_a-zA-Z0-9]+)'
     'captures':
       '1':
-        'name': 'punctuation.definition.tag.xml'
+        'name': 'punctuation.definition.tag.wxml'
       '2':
-        'name': 'entity.name.tag.xml'
+        'name': 'entity.name.tag.wxml'
     'end': '(\\?>)'
-    'name': 'meta.tag.preprocessor.xml'
+    'name': 'meta.tag.preprocessor.wxml'
     'patterns': [
       {
         'match': ' ([a-zA-Z-]+)'
-        'name': 'entity.other.attribute-name.xml'
+        'name': 'entity.other.attribute-name.wxml'
       }
       {
         'include': '#doublequotedString'
@@ -30,13 +30,13 @@
     'begin': '(<!)(DOCTYPE)\\s+([:a-zA-Z_][:a-zA-Z0-9_.-]*)'
     'captures':
       '1':
-        'name': 'punctuation.definition.tag.xml'
+        'name': 'punctuation.definition.tag.wxml'
       '2':
-        'name': 'keyword.other.doctype.xml'
+        'name': 'keyword.other.doctype.wxml'
       '3':
-        'name': 'variable.language.documentroot.xml'
+        'name': 'variable.language.documentroot.wxml'
     'end': '\\s*(>)'
-    'name': 'meta.tag.sgml.doctype.xml'
+    'name': 'meta.tag.sgml.doctype.wxml'
     'patterns': [
       {
         'include': '#internalSubset'
@@ -50,32 +50,32 @@
     'begin': '(<)((?:([-_a-zA-Z0-9]+)(:))?([-_a-zA-Z0-9:]+))(?=(\\s[^>]*)?></\\2>)'
     'beginCaptures':
       '1':
-        'name': 'punctuation.definition.tag.xml'
+        'name': 'punctuation.definition.tag.wxml'
       '2':
-        'name': 'entity.name.tag.xml'
+        'name': 'entity.name.tag.wxml'
       '3':
-        'name': 'entity.name.tag.namespace.xml'
+        'name': 'entity.name.tag.namespace.wxml'
       '4':
-        'name': 'punctuation.separator.namespace.xml'
+        'name': 'punctuation.separator.namespace.wxml'
       '5':
-        'name': 'entity.name.tag.localname.xml'
+        'name': 'entity.name.tag.localname.wxml'
     'end': '(>)(</)((?:([-_a-zA-Z0-9]+)(:))?([-_a-zA-Z0-9:]+))(>)'
     'endCaptures':
       '1':
-        'name': 'punctuation.definition.tag.xml'
+        'name': 'meta.tag.$3.wxml'
       '2':
-        'name': 'punctuation.definition.tag.xml'
+        'name': 'meta.tag.$3.wxml'
       '3':
-        'name': 'entity.name.tag.xml'
+        'name': 'entity.name.tag.$2.wxml'
       '4':
-        'name': 'entity.name.tag.namespace.xml'
+        'name': 'entity.name.tag.$2.namespace.wxml'
       '5':
-        'name': 'punctuation.separator.namespace.xml'
+        'name': 'punctuation.separator.$2.namespace.wxml'
       '6':
-        'name': 'entity.name.tag.localname.xml'
+        'name': 'entity.name.tag.$2.localname.wxml'
       '7':
-        'name': 'punctuation.definition.tag.xml'
-    'name': 'meta.tag.no-content.xml'
+        'name': 'punctuation.definition.tag.$2.wxml'
+    'name': 'meta.tag.$2.no-content.wxml'
     'patterns': [
       {
         'include': '#tagStuff'
@@ -86,17 +86,17 @@
     'begin': '(</?)(?:([-\\w\\.]+)((:)))?([-\\w\\.:]+)'
     'captures':
       '1':
-        'name': 'punctuation.definition.tag.xml'
+        'name': 'punctuation.definition.tag.wxml'
       '2':
-        'name': 'entity.name.tag.namespace.xml'
+        'name': 'entity.name.tag.namespace.wxml'
       '3':
-        'name': 'entity.name.tag.xml'
+        'name': 'entity.name.tag.wxml'
       '4':
-        'name': 'punctuation.separator.namespace.xml'
+        'name': 'punctuation.separator.namespace.wxml'
       '5':
-        'name': 'entity.name.tag.localname.xml'
+        'name': 'entity.name.tag.localname.wxml'
     'end': '(/?>)'
-    'name': 'meta.tag.xml'
+    'name': 'meta.tag.wxml'
     'patterns': [
       {
         'include': '#tagStuff'
@@ -113,16 +113,16 @@
     'begin': '<%@'
     'beginCaptures':
       '0':
-        'name': 'punctuation.section.embedded.begin.xml'
+        'name': 'punctuation.section.embedded.begin.wxml'
     'end': '%>'
     'endCaptures':
       '0':
-        'name': 'punctuation.section.embedded.end.xml'
-    'name': 'source.java-props.embedded.xml'
+        'name': 'punctuation.section.embedded.end.wxml'
+    'name': 'source.java-props.embedded.wxml'
     'patterns': [
       {
         'match': 'page|include|taglib'
-        'name': 'keyword.other.page-props.xml'
+        'name': 'keyword.other.page-props.wxml'
       }
     ]
   }
@@ -130,12 +130,12 @@
     'begin': '<%[!=]?(?!--)'
     'beginCaptures':
       '0':
-        'name': 'punctuation.section.embedded.begin.xml'
+        'name': 'punctuation.section.embedded.begin.wxml'
     'end': '(?!--)%>'
     'endCaptures':
       '0':
-        'name': 'punctuation.section.embedded.end.xml'
-    'name': 'source.java.embedded.xml'
+        'name': 'punctuation.section.embedded.end.wxml'
+    'name': 'source.java.embedded.wxml'
     'patterns': [
       {
         'include': 'source.java'
@@ -146,12 +146,12 @@
     'begin': '<!\\[CDATA\\['
     'beginCaptures':
       '0':
-        'name': 'punctuation.definition.string.begin.xml'
+        'name': 'punctuation.definition.string.begin.wxml'
     'end': ']]>'
     'endCaptures':
       '0':
-        'name': 'punctuation.definition.string.end.xml'
-    'name': 'string.unquoted.cdata.xml'
+        'name': 'punctuation.definition.string.end.wxml'
+    'name': 'string.unquoted.cdata.wxml'
   }
 ]
 'repository':
@@ -159,15 +159,15 @@
     'begin': '(<!)(ENTITY)\\s+(%\\s+)?([:a-zA-Z_][:a-zA-Z0-9_.-]*)(\\s+(?:SYSTEM|PUBLIC)\\s+)?'
     'captures':
       '1':
-        'name': 'punctuation.definition.tag.xml'
+        'name': 'punctuation.definition.tag.wxml'
       '2':
-        'name': 'keyword.other.entity.xml'
+        'name': 'keyword.other.entity.wxml'
       '3':
-        'name': 'punctuation.definition.entity.xml'
+        'name': 'punctuation.definition.entity.wxml'
       '4':
-        'name': 'variable.language.entity.xml'
+        'name': 'variable.language.entity.wxml'
       '5':
-        'name': 'keyword.other.entitytype.xml'
+        'name': 'keyword.other.entitytype.wxml'
     'end': '(>)'
     'patterns': [
       {
@@ -179,17 +179,17 @@
     ]
   'bare-ampersand':
     'match': '&'
-    'name': 'invalid.illegal.bad-ampersand.xml'
+    'name': 'invalid.illegal.bad-ampersand.wxml'
   'doublequotedString':
     'begin': '"'
     'beginCaptures':
       '0':
-        'name': 'punctuation.definition.string.begin.xml'
+        'name': 'punctuation.definition.string.begin.wxml'
     'end': '"'
     'endCaptures':
       '0':
-        'name': 'punctuation.definition.string.end.xml'
-    'name': 'string.quoted.double.xml'
+        'name': 'punctuation.definition.string.end.wxml'
+    'name': 'string.quoted.double.wxml'
     'patterns': [
       {
         'include': '#entity'
@@ -201,18 +201,18 @@
   'entity':
     'captures':
       '1':
-        'name': 'punctuation.definition.constant.xml'
+        'name': 'punctuation.definition.constant.wxml'
       '3':
-        'name': 'punctuation.definition.constant.xml'
+        'name': 'punctuation.definition.constant.wxml'
     'match': '(&)([:a-zA-Z_][:a-zA-Z0-9_.-]*|#[0-9]+|#x[0-9a-fA-F]+)(;)'
-    'name': 'constant.character.entity.xml'
+    'name': 'constant.character.entity.wxml'
   'internalSubset':
     'begin': '(\\[)'
     'captures':
       '1':
-        'name': 'punctuation.definition.constant.xml'
+        'name': 'punctuation.definition.constant.wxml'
     'end': '(\\])'
-    'name': 'meta.internalsubset.xml'
+    'name': 'meta.internalsubset.wxml'
     'patterns': [
       {
         'include': '#EntityDecl'
@@ -227,21 +227,21 @@
   'parameterEntity':
     'captures':
       '1':
-        'name': 'punctuation.definition.constant.xml'
+        'name': 'punctuation.definition.constant.wxml'
       '3':
-        'name': 'punctuation.definition.constant.xml'
+        'name': 'punctuation.definition.constant.wxml'
     'match': '(%)([:a-zA-Z_][:a-zA-Z0-9_.-]*)(;)'
-    'name': 'constant.character.parameter-entity.xml'
+    'name': 'constant.character.parameter-entity.wxml'
   'singlequotedString':
     'begin': '\''
     'beginCaptures':
       '0':
-        'name': 'punctuation.definition.string.begin.xml'
+        'name': 'punctuation.definition.string.begin.wxml'
     'end': '\''
     'endCaptures':
       '0':
-        'name': 'punctuation.definition.string.end.xml'
-    'name': 'string.quoted.single.xml'
+        'name': 'punctuation.definition.string.end.wxml'
+    'name': 'string.quoted.single.wxml'
     'patterns': [
       {
         'include': '#entity'
@@ -255,13 +255,13 @@
       {
         'captures':
           '1':
-            'name': 'entity.other.attribute-name.namespace.xml'
+            'name': 'entity.other.attribute-name.namespace.wxml'
           '2':
-            'name': 'entity.other.attribute-name.xml'
+            'name': 'entity.other.attribute-name.wxml'
           '3':
-            'name': 'punctuation.separator.namespace.xml'
+            'name': 'punctuation.separator.namespace.wxml'
           '4':
-            'name': 'entity.other.attribute-name.localname.xml'
+            'name': 'entity.other.attribute-name.localname.wxml'
         'match': '(?:^|\\s+)(?:([-\\w.]+)((:)))?([-\\w.:]+)='
       }
       {
@@ -275,6 +275,6 @@
     'begin': '<[!%]--'
     'captures':
       '0':
-        'name': 'punctuation.definition.comment.xml'
+        'name': 'punctuation.definition.comment.wxml'
     'end': '--%?>'
-    'name': 'comment.block.xml'
+    'name': 'comment.block.wxml'
