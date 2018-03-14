@@ -1,4 +1,4 @@
-'.text.xml':
+'.text.wxml':
 	# 视图容器
 	'视图容器':
     'prefix': 'view'

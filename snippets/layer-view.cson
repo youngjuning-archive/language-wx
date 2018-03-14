@@ -1,4 +1,4 @@
-'.text.xml':
+'.text.wxml':
 	'列表渲染':
 	  'prefix': 'for'
 	  'body': """
