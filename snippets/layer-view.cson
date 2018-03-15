@@ -1,7 +1,7 @@
-'.text.wxml':
+'.text.xml':
 	'列表渲染':
-	  'prefix': 'for'
-	  'body': """
+		'prefix': 'for'
+		'body': """
 			<block wx:for="{{${1:Array}}}">
 				{{index}}:{{item}}
 			</block>
@@ -18,8 +18,8 @@
 		'description': '条件渲染'
 		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/conditional.html'
 	'条件渲染之else':
-    'prefix': 'else'
-    'body': """
+		'prefix': 'else'
+		'body': """
 			<block wx:else>
 				$1
 			</block>
@@ -27,8 +27,8 @@
 		'description': '条件渲染'
 		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/conditional.html'
 	'条件渲染之elif':
-    'prefix': 'elif'
-    'body': """
+		'prefix': 'elif'
+		'body': """
 			<block wx:elif>
 				$1
 			</block>
@@ -36,40 +36,40 @@
 		'description': '条件渲染'
 		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/conditional.html'
 	'定义模板':
-	  'prefix': 'template'
-	  'body': """
+		'prefix': 'template'
+		'body': """
 			<template name="$1">
 				$1
 			</template>
 		"""
-	  'description': '模版'
-	  'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/template.html'
+		'description': '模版'
+		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/template.html'
 	'引用模板':
-    'prefix': 'wximport'
-    'body': """
+		'prefix': 'wximport'
+		'body': """
 			<import src="${1:目标模板路径}"/>
 			<template is="${2:目标模板名字}" data="{{${3:传递的数据}}}"/>
 		"""
 		'description': '引用'
 		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/import.html'
 	'包含文件':
-	  'prefix': 'wxinclude'
-	  'body': '<include src="${1:目标文件路径}"/>'
+		'prefix': 'wxinclude'
+		'body': '<include src="${1:目标文件路径}"/>'
 		'description': '引用'
 		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/import.html'
 '.punctuation.definition.tag.xml,.meta.tag.xml,.meta.tag.no-content.xml':
 	'标签内的条件渲染':
-	  'prefix': 'if'
-	  'body': 'wx:if="\{\{${1:condition}\}\}"'
-	  'description': '条件渲染'
-	  'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/conditional.html'
+		'prefix': 'if'
+		'body': 'wx:if="\{\{${1:condition}\}\}"'
+		'description': '条件渲染'
+		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/conditional.html'
 	'标签内的条件渲染之elif':
-	  'prefix': 'elif'
-	  'body': 'wx:elif'
-	  'description': '条件渲染'
-	  'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/conditional.html'
+		'prefix': 'elif'
+		'body': 'wx:elif'
+		'description': '条件渲染'
+		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/conditional.html'
 	'标签内的条件渲染之else':
-	  'prefix': 'else'
-	  'body': 'wx:else'
-	  'description': '条件渲染'
-	  'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/conditional.html'
+		'prefix': 'else'
+		'body': 'wx:else'
+		'description': '条件渲染'
+		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/conditional.html'

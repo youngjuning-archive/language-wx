@@ -1,4 +1,4 @@
-'.text.wxml':
+'.text.xml':
 	'视图容器':
     'prefix': 'wxview'
     'body': """
@@ -98,7 +98,7 @@
 		'prefix': 'iconfont'
 		'body': '<view class="iconfont icon-$1"></view>'
 # 导航组件属性
-'.meta.tag.navigator.wxml':
+'.meta.tag.navigator.xml':
   'open-type':
     'prefix': 'open-type'
     'body': 'open-type="${1:navigate/redirect/switchTab/reLaunch/navigateBack}"'
@@ -109,7 +109,7 @@
     'prefix': 'delta'
     'body': 'delta="1"'
 # 输入框组件属性
-'.meta.tag.input.wxml':
+'.meta.tag.input.xml':
   '是否是密码类型':
     'prefix': 'password'
     'body': """
