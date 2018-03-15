@@ -318,18 +318,18 @@
   '退回上一个页面':
     'prefix': 'wxnavigateBack'
     'body': '''
-    wx.navigateBack({
-      delta: ${1:1}, // 回退前 delta(默认为1) 页面
-      success: function(res){
-        ${2:// success}
-      },
-      fail: function() {
-        ${3:// fail}
-      },
-      complete: function() {
-        ${4:// complete}
-      }
-    })
+      wx.navigateBack({
+        delta: ${1:1}, ${2:// 回退前 delta(默认为1) 页面}
+        success: function(res){
+          ${3:// success}
+        },
+        fail: function() {
+          ${4:// fail}
+        },
+        complete: function() {
+          ${5:// complete}
+        }
+      });
     '''
     'description': '界面->导航->关闭当前页面，返回上一页面或多级页面'
     'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/ui-navigate.html#wxrelaunchobject'
