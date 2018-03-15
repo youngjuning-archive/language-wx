@@ -3,7 +3,6 @@
   '导航栏标题文字内容':
     'prefix': 'navigationBarTitleText'
     'body': '"navigationBarTitleText":"$1"'
-
   '设置全局默认窗口的表现形式':
     'prefix': 'wxwindow'
     'body': """
@@ -15,7 +14,6 @@
         "onReachBottomDistance": 50
       }
     """
-
   '底部tab或者顶部tab的表现':
     'prefix': 'wxtabBar'
     'body': """
@@ -25,21 +23,18 @@
         "backgroundColor": "#fff",
         "borderStyle":"white",
         "position":"bottom",
-        "list": [
-          {
-            "pagePath": "pages/index/index",
-            "text": "首页",
-            "iconPath":"../img/a.png",
-            "selectedIconPath": "../img/a.png"
-          },
-          {
+        "list": [{
+          "pagePath": "pages/index/index",
+          "text": "首页",
+          "iconPath":"../img/a.png",
+          "selectedIconPath": "../img/a.png"
+        },
+        {
           "pagePath": "pages/logs/logs",
           "text": "日志"
-          }
-        ]
+        }]
       }
     """
-
   '设置各种网络请求的超时时间':
     'prefix': 'wxnetworkTimeout'
     'body': """
@@ -50,12 +45,9 @@
         "downloadFile":"10000"
       }
     """
-
-  '设置各种网络请求的超时时间':
+  '调试选项':
     'prefix': 'wxdebug'
     'body': '"debug": ${1:true} //项目上线后，建议关闭此项，或者不写此项,默认false'
-
-
   '设置页面默认窗口的表现形式(会覆盖全局配置)':
     'prefix': 'wxpagewindow'
     'body': """
