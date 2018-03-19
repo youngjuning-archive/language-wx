@@ -1,13 +1,13 @@
 '.text.xml':
 	'视图容器':
-    'prefix': 'wxview'
+    'prefix': 'view'
     'body': """
       <view class="$1">$2</view>
     """
     'description': '视图容器'
     'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/view.html'
 	'视图容器->可横向滚动视图区域':
-    'prefix': 'wxscroll-view-x'
+    'prefix': 'scroll-view-x'
     'body': """
     	<scroll-view scroll-x="true" id="$1">
     	<!--scroll-view 采用 flex是不起作用的，建议在 scroll-view里再套一层view，对这个view采用flex-->
@@ -23,7 +23,7 @@
     'description': '可滚动视图区域'
     'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/scroll-view.html'
 	'视图容器->可竖向滚动视图区域':
-    'prefix': 'wxscroll-view-y'
+    'prefix': 'scroll-view-y'
     'body': """
     	<!-- 必须通过 WXSS 设置 height -->
     	<scroll-view scroll-y="true" id="$1">
@@ -37,7 +37,7 @@
     'description': '可滚动视图区域'
     'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/scroll-view.html'
 	'视图容器->滑块视图容器':
-    'prefix': 'wxswiper'
+    'prefix': 'swiper'
     'body': """
     	<!--请设置navigator、image的宽高100%、swiper默认宽100%，高150px，swiper-item默认宽高100%-->
     	<swiper id="${1:banner}"
@@ -59,29 +59,29 @@
     'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/swiper.html'
 	# 基础内容
 	'基础内容->图标':
-    'prefix': 'wxicon'
+    'prefix': 'icon'
     'body': '<icon type="${1:success}" size="$2" color="$3"/>'
     'description': '基础内容->图标'
     'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/icon.html'
 	'基础内容->文本':
-    'prefix': 'wxtext'
+    'prefix': 'text'
     'body': '<text>$1</text>'
 		'description': '基础内容->文本'
 		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/text.html'
 	# 表单组件
 	'表单组件->按钮':
-		'prefix': 'wxbutton'
+		'prefix': 'button'
 		'body': '<button type="${1:primary}" bindtap="${2:tapEvent}" hover-class="none">primary</button>'
 		'description': '表单组件->按钮'
 		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/button.html'
 	'表单组件->输入框':
-		'prefix': 'wxinput'
+		'prefix': 'input'
 		'body': '<input value="{{$1}}" placeholder="$2" bindinput="$3"/>'
 		'description': '表单组件->输入框'
 		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/input.html'
 	# 导航
 	'导航->navigator':
-    'prefix': 'wxnavigator'
+    'prefix': 'navigator'
     'body': """
 			<navigator url="$1" open-type="${2:navigate}" class="$3">
 				$4
@@ -89,7 +89,7 @@
 		"""
 	# 媒体组件
 	'媒体组件->图片':
-    'prefix': 'wximage'
+    'prefix': 'image'
     'body': '<image src="$1"></image>'
     'description':'媒体组件->图片'
     'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/image.html'
