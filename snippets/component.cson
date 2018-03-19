@@ -83,8 +83,8 @@
 	'导航->navigator':
     'prefix': 'wxnavigator'
     'body': """
-			<navigator url="$1" open-type="${2:navigate}">
-				$3
+			<navigator url="$1" open-type="${2:navigate}" class="$3">
+				$4
 			</navigator>
 		"""
 	# 媒体组件

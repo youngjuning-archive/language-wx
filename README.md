@@ -21,7 +21,6 @@
 
 ## TODOS
 
-- [ ] TODO: 发布v0.4.2版本
 - [x] TODO: api-interface 设置置顶信息
 - [ ] TODO: api-interface 位置绘画
 - [ ] TODO: 完善 api-device（设备）

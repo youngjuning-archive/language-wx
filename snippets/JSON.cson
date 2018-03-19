@@ -6,11 +6,25 @@
   '设置全局默认窗口的表现形式':
     'prefix': 'wxwindow'
     'body': """
-      "window":{//设置默认窗口的表现形式
-        "navigationBarTitleText": "WeChat",
+      "window":{
+        "navigationBarTitleText": "${1:WeChat}",
+        "navigationBarBackgroundColor": "#000000",
         "navigationBarTextStyle": "white",
-        "backgroundTextStyle": "light",
-        "enablePullDownRefresh":"false",
+        "backgroundTextStyle": "dark",
+        "enablePullDownRefresh":false,
+        "onReachBottomDistance": 50
+      }
+    """
+  '设置页面默认窗口的表现形式(会覆盖全局配置)':
+    'prefix': 'wxpagewindow'
+    'body': """
+      {
+        "navigationBarTitleText": "${1:WeChat}",
+        "navigationBarBackgroundColor": "#000000",
+        "navigationBarTextStyle": "white",
+        "backgroundTextStyle": "dark",
+        "enablePullDownRefresh": false,
+        "disableScroll": false,
         "onReachBottomDistance": 50
       }
     """
@@ -48,16 +62,3 @@
   '调试选项':
     'prefix': 'wxdebug'
     'body': '"debug": ${1:true} //项目上线后，建议关闭此项，或者不写此项,默认false'
-  '设置页面默认窗口的表现形式(会覆盖全局配置)':
-    'prefix': 'wxpagewindow'
-    'body': """
-      {
-        "navigationBarTitleText": "${1:WeChat}",
-        "navigationBarBackgroundColor": "#ffffff",
-        "navigationBarTextStyle": "black",
-        "backgroundTextStyle": "light",
-        "enablePullDownRefresh": false,
-        "disableScroll": false,
-        "onReachBottomDistance": 50
-      }
-    """
