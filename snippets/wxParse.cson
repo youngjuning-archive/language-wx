@@ -1,0 +1,31 @@
+'.source.js':
+	'在使用的View中引入WxParse模块':
+	  'prefix': 'wxParse-js'
+	  'body': """
+			import WxParse from '../../components/wxParse/wxParse.js';
+	  """
+	  'description': 'wxParse-微信小程序富文本解析自定义组件'
+	  'descriptionMoreURL': 'https://github.com/youngjuning/wxParse'
+	'在使用的Wxss中引入WxParse.css,可以在app.wxss':
+	  'prefix': 'wxParse-wxss'
+	  'body': """
+			@import "/wxParse/wxParse.wxss";
+	  """
+	  'description': 'wxParse-微信小程序富文本解析自定义组件'
+	  'descriptionMoreURL': 'https://github.com/youngjuning/wxParse'
+	'wxParse数据绑定':
+		'prefix': 'wxParse'
+		'body': """
+			var ${1:content} = ${2:'<div>我是HTML代码</div>'};
+			wxParse.wxParse('${1:content}',${3:html/md},${1:content},this);// 可选参数：imagePadding
+		"""
+		'description': 'wxParse-微信小程序富文本解析自定义组件'
+		'descriptionMoreURL': 'https://github.com/youngjuning/wxParse'
+	'wxParse模版引用':
+		'prefix': 'wxParse-wxml'
+		'body': """
+			<import src="../../components/wxParse/wxParse.wxml"/>
+			<template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+		"""
+		'description': 'wxParse-微信小程序富文本解析自定义组件'
+		'descriptionMoreURL': 'https://github.com/youngjuning/wxParse'
