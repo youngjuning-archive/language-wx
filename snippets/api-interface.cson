@@ -5,8 +5,8 @@
     'body': """
       wx.showToast({
         title: '${1:轻提示的内容}',
-        icon: 'success',
-        mask: ${2:true}
+        icon: '${2:success/loading/none}',
+        mask: ${3:true}
       });
     """
     'description': '界面->交互反馈->显示消息提示框'
@@ -378,24 +378,6 @@
     """
     'description': '界面->位置->将页面滚动到目标位置'
     'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/scroll.html'
-  # 绘画
-  '创建canvas绘图上下文(指定 canvasId)':
-    'prefix': 'wxcreateCanvasContext'
-    'body': """
-      wx.createCanvasContext()
-    """
-    'description': '界面->绘图->需要指定 canvasId，该绘图上下文只作用于对应的 <canvas/>'
-    'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/canvas/create-canvas-context.html'
-  '导出图片':
-    'prefix': 'wxcanvasToTempFilePath'
-    'body': '''
-      wx.drawCanvas({
-        canvasId: '${1:String}',
-        actions: actions
-      })
-    '''
-    'description': '界面->绘图->把当前画布指定区域的内容导出生成指定大小的图片，并返回文件路径'
-    'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/canvas/temp-file.html'
   # 下拉刷新
   '开始下拉刷新动画':
     'prefix': 'wxstopPullDownRefresh'

@@ -1,0 +1,19 @@
+'.source.js':
+	# 绘画
+	'创建canvas绘图上下文(指定 canvasId)':
+		'prefix': 'wxcreateCanvasContext'
+		'body': """
+			wx.createCanvasContext()
+		"""
+		'description': '界面->绘图->需要指定 canvasId，该绘图上下文只作用于对应的 <canvas/>'
+		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/canvas/create-canvas-context.html'
+	'导出图片':
+		'prefix': 'wxcanvasToTempFilePath'
+		'body': '''
+			wx.drawCanvas({
+				canvasId: '${1:String}',
+				actions: actions
+			})
+		'''
+		'description': '界面->绘图->把当前画布指定区域的内容导出生成指定大小的图片，并返回文件路径'
+		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/canvas/temp-file.html'
