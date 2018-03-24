@@ -71,9 +71,36 @@
 	# 表单组件
 	'表单组件->按钮':
 		'prefix': 'button'
-		'body': '<button type="${1:primary}" bindtap="${2:tapEvent}" hover-class="none">primary</button>'
+		'body': """
+			<button type="${1:default/primary/warn}" ${2:hover-class="none" }bindtap="${3:btntap}">$4</button>
+		"""
 		'description': '表单组件->按钮'
 		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/button.html'
+	'多项选择器，由多个checkbox组成':
+	  'prefix': 'checkbox-group'
+	  'body': """
+			<checkbox-group bindchange="${1:checkboxChange}">
+				<label class="checkbox" wx:for="{{${2:items}}}">
+					<checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+				</label>
+			</checkbox-group>
+	  """
+	  'description': '表单组件->checkbox-group'
+	  'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/checkbox.html'
+	'表单form':
+	  'prefix': 'form'
+	  'body': """
+			<form bindsubmit="formSubmit" bindreset="formReset">
+				<!-- 需要在表单组件中加上 name 来作为 key -->
+				$1
+				<view class="weui-btn-area">
+					<button type="primary" class="weui-btn" hover-class="none" form-type="submit">提交</button>
+					<button type="warn" class="weui-btn" hover-class="none" form-type="reset">重置</button>
+				</view>
+			</form>
+	  """
+	  'description': 'form'
+	  'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/form.html'
 	'表单组件->输入框':
 		'prefix': 'input'
 		'body': '<input value="{{$1}}" placeholder="$2" bindinput="$3"/>'
@@ -100,9 +127,9 @@
 	'图标-iconfont':
 		'prefix': 'iconfont'
 		'body': '<view class="iconfont icon-$1"></view>'
-# 导航组件属性
-'.meta.tag.navigator.xml':
-  'open-type':
+'.meta.tag.xml':
+	# 导航组件属性
+	'open-type':
     'prefix': 'open-type'
     'body': 'open-type="${1:navigate/redirect/switchTab/reLaunch/navigateBack}"'
   'hover-class':
@@ -111,55 +138,75 @@
   'navigator->delta':
     'prefix': 'delta'
     'body': 'delta="1"'
-# 输入框组件属性
-'.meta.tag.input.xml':
-  '是否是密码类型':
-    'prefix': 'password'
-    'body': """
-      password
-    """
-  '是否禁用':
+	# 输入框组件属性
+	'是否是密码类型':
+		'prefix': 'password'
+		'body': 'password'
+	'是否禁用':
+		'prefix': 'disabled'
+		'body': 'disabled'
+	'最大输入长度，设置为 -1 的时候不限制最大长度':
+		'prefix': 'maxlength'
+		'body': 'maxlength="140"'
+	'指定 placeholder 的样式':
+		'prefix': 'placeholder-style'
+		'body': """
+			placeholder-style="color:red"
+		"""
+	'指定 placeholder 的样式类':
+		'prefix': 'placeholder-class'
+		'body': """
+			placeholder-class="input-placeholder"
+		"""
+	'获取焦点':
+		'prefix': 'focus'
+		'body': 'focus'
+	'input 的类型':
+		'prefix': 'type'
+		'body': 'type="${1:text/number/idcard/digit}"'
+	'设置键盘右下角按钮的文字':
+		'prefix': 'confirm-type'
+		'body': 'confirm-type="${1:send/search/next/go/done}"'
+	'当键盘输入时，触发input事件':
+		'prefix': 'bindinput'
+		'body': 'bindinput="$1"'
+	'输入框聚焦时触发':
+		'prefix': 'bindfocus'
+		'body': 'bindfocus="$1"'
+	'输入框失去焦点时触发':
+		'prefix': 'bindblur'
+		'body': 'bindblur="$1"'
+	'点击完成按钮时触发':
+		'prefix': 'bindconfirm'
+		'body': 'bindconfirm="$1"'
+	# 按钮组件属性
+	'按钮是否镂空，背景色透明':
+    'prefix': 'plain'
+    'body': 'plain'
+	'是否禁用':
     'prefix': 'disabled'
-    'body': """
-      disabled
-    """
-  '最大输入长度，设置为 -1 的时候不限制最大长度':
-    'prefix': 'maxlength'
-    'body': """
-      maxlength="140"
-    """
-  '获取焦点':
-    'prefix': 'focus'
-    'body': """
-      focus
-    """
-  'input 的类型':
-    'prefix': 'type'
-    'body': """
-      type="${1:text/number/idcard/digit}"
-    """
-  '设置键盘右下角按钮的文字':
-    'prefix': 'confirm-type'
-    'body': """
-      confirm-type="${1:send/search/next/go/done}"
-    """
-  '当键盘输入时，触发input事件':
-    'prefix': 'bindinput'
-    'body': """
-      bindinput="$1"
-    """
-  '输入框聚焦时触发':
-    'prefix': 'bindfocus'
-    'body': """
-      bindfocus="$1"
-    """
-  '输入框失去焦点时触发':
-    'prefix': 'bindblur'
-    'body': """
-      bindblur="$1"
-    """
-  '点击完成按钮时触发':
-    'prefix': 'bindconfirm'
-    'body': """
-      bindconfirm="$1"
-    """
+    'body': 'disabled'
+	'名称前是否带 loading 图标':
+    'prefix': 'loading'
+    'body': 'loading'
+	'button->size':
+	  'prefix': 'size'
+	  'body': 'size="${1:default/mini}"'
+	'button->form-type':
+	  'prefix': 'form-type'
+	  'body': 'form-type="${1:submit/reset}"'
+	'button->open-type':
+	  'prefix': 'open-type'
+	  'body': '${1:contact/share/getUserInfo/getPhoneNumber/launchApp}'
+	'button->bindgetuserinfo':
+	  'prefix': 'bindgetuserinfo'
+	  'body': 'bindgetuserinfo="getUserInfo"'
+	'button->bindcontact':
+	  'prefix': 'bindcontact'
+	  'body': 'bindcontact="handleContact"'
+	'button->bindgetphonenumber':
+	  'prefix': 'bindgetphonenumber'
+	  'body': 'bindgetphonenumber="getPhoneNumber"'
+	'button->binderrror':
+	  'prefix': 'binderrror'
+	  'body': 'binderrror="handleError"'
