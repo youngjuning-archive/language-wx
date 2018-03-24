@@ -1,0 +1,75 @@
+'.text.xml':
+	'普通选择器':
+	  'prefix': 'selector'
+	  'body': """
+			<!--当range是一个Object Array时，通过range-key来指定Object中key的值作为选择器显示内容-->
+			<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+				<view class="picker">
+					当前选择：{{array[index]}}
+				</view>
+			</picker>
+	  """
+	  'description': '普通选择器'
+	  'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/picker.html'
+	'多列选择器':
+	  'prefix': 'multiSelector'
+	  'body': """
+			<!--当 range 是一个 二维Object Array 时，通过 range-key 来指定 Object 中 key 的值作为选择器显示内容-->
+			<picker mode="multiSelector"
+				bindchange="bindMultiPickerChange"
+				bindcolumnchange="bindMultiPickerColumnChange"
+				value="{{multiIndex}}"
+				range="{{multiArray}}">
+				<view class="picker">
+					当前选择：{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}}
+				</view>
+			</picker>
+	  """
+	  'description': '多列选择器'
+	  'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/picker.html'
+	'时间选择器':
+	  'prefix': 'time'
+	  'body': """
+			<!--时间格式为"hh:mm"-->
+			<picker mode="time"
+				value="{{time}}"
+				start="09:01"
+				end="21:01"
+				bindchange="bindTimeChange">
+				<view class="picker">
+					当前选择: {{time}}
+				</view>
+			</picker>
+	  """
+	  'description': 'picker->时间选择器'
+	  'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/picker.html'
+	'日期选择器':
+	  'prefix': 'date'
+	  'body': """
+			<picker mode="date"
+				value="{{date}}"
+				start="2015-09-01"
+				end="2017-09-01"
+				fields="day"
+				bindchange="bindDateChange">
+				<view class="picker">
+					当前选择: {{date}}
+				</view>
+			</picker>
+	  """
+	  'description': 'picker->日期选择器'
+	  'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/picker.html'
+	'省市区选择器':
+	  'prefix': 'region'
+	  'body': """
+			<picker mode="region"
+				bindchange="bindRegionChange"
+				value="{{region}}"
+				custom-item="{{customItem}}">
+				<view class="picker">
+					当前选择：{{region[0]}}，{{region[1]}}，{{region[2]}}
+				</view>
+			</picker>
+	  """
+	  'description': 'picker->省市区选择器'
+	  'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/picker.html'

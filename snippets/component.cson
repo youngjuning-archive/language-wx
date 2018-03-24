@@ -142,9 +142,6 @@
 	'是否是密码类型':
 		'prefix': 'password'
 		'body': 'password'
-	'是否禁用':
-		'prefix': 'disabled'
-		'body': 'disabled'
 	'最大输入长度，设置为 -1 的时候不限制最大长度':
 		'prefix': 'maxlength'
 		'body': 'maxlength="140"'
