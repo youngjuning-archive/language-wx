@@ -106,6 +106,45 @@
 		'body': '<input value="{{$1}}" placeholder="$2" bindinput="$3"/>'
 		'description': '表单组件->输入框'
 		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/input.html'
+	'单项选择器':
+	  'prefix': 'radio-group'
+	  'body': """
+			<radio-group class="radio-group" bindchange="radioChange">
+				<label class="radio" wx:for="{{items}}">
+					<radio value="{{item.name}}" checked="{{item.checked}}" color="${1:#1AAD19}"/>{{item.value}}
+				</label>
+			</radio-group>
+	  """
+	  'description': '表单->radio'
+	  'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/radio.html'
+	'滑动选择器':
+	  'prefix': 'slider'
+	  'body': """
+			<slider bindchange="sliderChange"
+				min="0"
+				max="100"
+				step="5"
+				show-value/>
+	  """
+	  'description': '表单->slider'
+	  'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/slider.html'
+	'开关选择器':
+	  'prefix': 'switch'
+	  'body': """
+			<switch type="${1:switch/checkbox}" bindchange="switchChange"/>
+	  """
+	  'description': '表单->switch'
+	  'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/switch.html'
+	'多行输入框':
+	  'prefix': 'textarea'
+	  'body': """
+			<textarea bindblur="bindTextAreaBlur"
+				placeholder="自动变高"
+				maxlength="140"
+				auto-height/>
+	  """
+	  'description': '表单->textarea'
+	  'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/textarea.html'
 	# 导航
 	'导航->navigator':
     'prefix': 'navigator'
