@@ -69,6 +69,7 @@
 		'description': '基础内容->文本'
 		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/text.html'
 	# 表单组件
+	# picker组件在component-picker.cson文件中
 	'表单组件->按钮':
 		'prefix': 'button'
 		'body': """
@@ -162,6 +163,15 @@
     'body': '<image src="$1"></image>'
     'description':'媒体组件->图片'
     'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/image.html'
+	# 画布
+	# canvas 标签默认宽度300px、高度225px
+	'canvas':
+	  'prefix': 'canvas'
+	  'body': """
+			<canvas canvas-id="$1"></canvas>
+	  """
+	  'description': 'canvas'
+	  'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/canvas.html#canvas'
 	# 扩展
 	'图标-iconfont':
 		'prefix': 'iconfont'
