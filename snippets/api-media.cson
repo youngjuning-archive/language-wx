@@ -19,21 +19,24 @@
     '''
   '预览图片':
     'prefix': 'wxpreviewImage'
-    'body': '''
-    wx.previewImage({
-      // current: '${1:String}', // 当前显示图片的链接，不填则默认为 urls 的第一张
-      urls: [StringArray],
-      success: function(res){
-        $2// success
-      },
-      fail: function() {
-        $3// fail
-      },
-      complete: function() {
-        $4// complete
+    'body': """
+      handlePreviewImage(e){
+        let src = e.currentTarget.dataset.src; // 当前显示图片的链接
+        wx.previewImage({
+          // current: 'String', // 当前显示图片的链接，不填则默认为 urls 的第一张
+          urls: [StringArray],
+          success: function(res){
+            // success
+          },
+          fail: function() {
+            // fail
+          },
+          complete: function() {
+            // complete
+          }
+        })
       }
-    })
-    '''
+    """
   '开始录音':
     'prefix': 'wxstartRecord'
     'body': '''
@@ -141,7 +144,7 @@
       }
     })
     '''
-  '暂停播放音乐': 
+  '暂停播放音乐':
     'prefix': 'wxpauseBackgroundAudio'
     'body': '''
     wx.pauseBackgroundAudio({
@@ -172,7 +175,7 @@
       }
     })
     '''
-  '停止播放音乐': 
+  '停止播放音乐':
     'prefix': 'wxstopBackgroundAudio'
     'body': '''
     wx.stopBackgroundAudio({
