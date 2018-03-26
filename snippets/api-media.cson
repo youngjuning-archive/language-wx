@@ -1,42 +1,70 @@
+# 媒体
 '.source.js':
+  # 图片
   '从相册选择图片，或者拍照':
     'prefix': 'wxchooseImage'
-    'body': '''
-    wx.chooseImage({
-      count: 9, // 最多可以选择的图片张数，默认9
-      sizeType: ['original', 'compressed'], // original 原图，compressed 压缩图，默认二者都有
-      sourceType: ['album', 'camera'], // album 从相册选图，camera 使用相机，默认二者都有
-      success: function(res){
-        // success
-      },
-      fail: function() {
-        // fail
-      },
-      complete: function() {
-        // complete
-      }
-    })
-    '''
+    'body': """
+      wx.chooseImage({
+        count: 9, // 最多可以选择的图片张数，默认9
+        sizeType: ['original', 'compressed'], // original 原图，compressed 压缩图，默认二者都有
+        sourceType: ['album', 'camera'], // album 从相册选图，camera 使用相机，默认二者都有
+        success: function(res){
+          // success
+        },
+        fail: function() {
+          // fail
+        },
+        complete: function() {
+          // complete
+        }
+      })
+    """
   '预览图片':
     'prefix': 'wxpreviewImage'
     'body': """
-      handlePreviewImage(e){
-        let src = e.currentTarget.dataset.src; // 当前显示图片的链接
-        wx.previewImage({
-          // current: 'String', // 当前显示图片的链接，不填则默认为 urls 的第一张
-          urls: [StringArray],
-          success: function(res){
-            // success
-          },
-          fail: function() {
-            // fail
-          },
-          complete: function() {
-            // complete
-          }
-        })
-      }
+      wx.previewImage({
+        // current: 'String', // 当前显示图片的链接，不填则默认为 urls 的第一张
+        urls: [StringArray],
+        success: function(res){
+          // success
+        },
+        fail: function() {
+          // fail
+        },
+        complete: function() {
+          // complete
+        }
+      })
     """
+  '获取图片信息':
+    'prefix': 'wxgetImageInfo'
+    'body': """
+      wx.getImageInfo({
+        src: '$1', // 图片的路径，可以是相对路径，临时文件路径，存储文件路径，网络图片路径
+        success: function (res) {
+          console.log(res.width,res.height,res.path,res.type);
+        }
+      })
+    """
+    'description': 'wx.getImageInfo(OBJECT)'
+    'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/media-picture.html#wxgetimageinfoobject'
+  '保存图片到系统相册':
+    'prefix': 'wxsaveImageToPhotosAlbum'
+    'body': """
+      wx.saveImageToPhotosAlbum({
+        filePath: ${1:filePath},
+        success: (res)=>{
+          wx.showToast({
+            title: '保存成功',
+            icon: 'success',
+            mask: true
+          });
+        }
+      })
+    """
+    'description': 'wx.saveImageToPhotosAlbum(OBJECT)'
+    'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/media-picture.html#wxgetimageinfoobject'
+  # 录音
   '开始录音':
     'prefix': 'wxstartRecord'
     'body': '''
