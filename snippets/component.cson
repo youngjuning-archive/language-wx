@@ -215,6 +215,9 @@
 	'点击完成按钮时触发':
 		'prefix': 'bindconfirm'
 		'body': 'bindconfirm="$1"'
+	'点击组件时触发':
+		'prefix': 'bindtap'
+		'body': 'bindconfirm="$1"'
 	# 按钮组件属性
 	'按钮是否镂空，背景色透明':
     'prefix': 'plain'
