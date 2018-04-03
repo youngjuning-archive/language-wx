@@ -4,7 +4,7 @@
     'prefix': 'wxgetSystemInfo'
     'body': '''
     wx.getSystemInfo({
-      success: function(res) {
+      success: (res)=> {
         ${1:// success}
       }
     })
@@ -21,7 +21,7 @@
     'prefix': 'wxgetNetworkType'
     'body': '''
     wx.getNetworkType({
-      success: function(res) {
+      success: (res)=> {
         ${1:// success}
       }
     })

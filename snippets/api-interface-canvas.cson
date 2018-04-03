@@ -10,18 +10,17 @@
 	'绘制图像到画布':
 	  'prefix': 'ctxdrawImage'
 	  'body': """
-	    ctx.drawImage({
-				imageResource: '$1' // 所要绘制的图片资源
-			})
+			ctx.drawImage('${1:imageResource}',${2:0},${3:0},${4:systemInfo.windowWidth},${5:systemInfo.windowHeight});
 	  """
 	  'description': '界面->绘图->绘制图像到画布'
 	  'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/canvas/draw-image.html'
 	'生成图片，并返回文件路径':
 		'prefix': 'wxcanvasToTempFilePath'
-		'body': '''
-			wx.drawCanvas({
-				canvasId: '${1:String}'
+		'body': """
+			//在 draw 回调里调用该方法才能保证图片导出成功
+			wx.canvasToTempFilePath({
+				canvasId: '$1'
 			})
-		'''
+		"""
 		'description': '界面->绘图->把当前画布指定区域的内容导出生成指定大小的图片，并返回文件路径'
 		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/canvas/temp-file.html'

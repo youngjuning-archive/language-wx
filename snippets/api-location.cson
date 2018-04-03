@@ -4,13 +4,13 @@
     'body': '''
     wx.getLocation({
     type: '${1: wgs84}', // 默认为 wgs84 返回 gps 坐标，gcj02 返回可用于 wx.openLocation 的坐标
-    success: function(res){
+    success: (res)=>{
       $2// success
     },
-    fail: function() {
+    fail: ()=>{
       $3// fail
     },
-    complete: function() {
+    complete: ()=>{
       $4// complete
     }
     })
@@ -24,13 +24,13 @@
       scale: ${3:28}, // 缩放比例
       // name: 'name', // 位置名
       // address: 'address', // 地址的详细说明
-      success: function(res){
+      success: (res)=>{
         $4// success
       },
-      fail: function() {
+      fail: ()=>{
         $5// fail
       },
-      complete: function() {
+      complete: ()=>{
         $6// complete
       }
     })

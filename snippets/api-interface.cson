@@ -47,7 +47,7 @@
         title: '${1:提示的标题}',
         content: '${2:提示的内容}',
         showCancel: ${3:true},
-        success: function(){
+        success: ()=>{
           $4
         }
       });
@@ -105,13 +105,13 @@
       wx.setTabBarBadge({
         index: ${1:tabBar的哪一项，从左边算起},
         text: ${2:显示的文本，超过3个字符则显示成 "..."},
-        success: function(res){
+        success: (res)=>{
           ${3:// success}
         },
-        fail: function() {
+        fail: (error)=> {
           ${4:// fail}
         },
-        complete: function() {
+        complete: (res)=> {
           ${5:// complete}
         }
       });
@@ -123,13 +123,13 @@
     'body': """
       wx.removeTabBarBadge({
         index: ${1:tabBar的哪一项，从左边算起},
-        success: function(res){
+        success: (res)=>{
           ${2:// success}
         },
-        fail: function() {
+        fail: (error)=> {
           ${3:// fail}
         },
-        complete: function() {
+        complete: ()=> {
           ${4:// complete}
         }
       });
@@ -141,13 +141,13 @@
     'body': """
       wx.showTabBarRedDot({
         index: ${1:tabBar的哪一项，从左边算起},
-        success: function(res){
+        success: (res)=>{
           ${2:// success}
         },
-        fail: function() {
+        fail: (error)=> {
           ${3:// fail}
         },
-        complete: function() {
+        complete: ()=> {
           ${4:// complete}
         }
       });
@@ -159,13 +159,13 @@
     'body': """
       wx.hideTabBarRedDot({
         index: ${1:tabBar的哪一项，从左边算起},
-        success: function(res){
+        success: (res)=>{
           ${2:// success}
         },
-        fail: function() {
+        fail: (error)=> {
           ${3:// fail}
         },
-        complete: function() {
+        complete: ()=> {
           ${4:// complete}
         }
       })
@@ -180,13 +180,13 @@
         selectedColor: ${2:tab 上的文字选中时的颜色},
         backgroundColor: ${3:tab 的背景色},
         borderStyle: ${4:tab 上边框的颜色，仅支持 black/white},
-        success: function(res){
+        success: (res)=>{
           ${5:// success}
         },
-        fail: function() {
+        fail: (error)=> {
           ${6:// fail}
         },
-        complete: function() {
+        complete: ()=> {
           ${7:// complete}
         }
       });
@@ -201,13 +201,13 @@
         text: ${2:tab上的按钮文字},
         iconPath: ${3:图片路径，81px*81，40kb，不支持网络图片},
         selectedIconPath: ${3:选中时的图片路径，81px*81，40kb，不支持网络图片},
-        success: function(res){
+        success: (res)=>{
           ${4:// success}
         },
-        fail: function() {
+        fail: (error)=> {
           ${5:// fail}
         },
-        complete: function() {
+        complete: ()=> {
           ${6:// complete}
         }
       });
@@ -219,13 +219,13 @@
     'body': """
       wx.showTabBar({
         animation: ${1: 是否需要动画，默认无},
-        success: function(res){
+        success: (res)=>{
           ${2:// success}
         },
-        fail: function() {
+        fail: (error)=> {
           ${3:// fail}
         },
-        complete: function() {
+        complete: ()=> {
           ${4:// complete}
         }
       });
@@ -237,13 +237,13 @@
     'body': """
       wx.hideTabBar({
         animation: ${1: 是否需要动画，默认无},
-        success: function(res){
+        success: (res)=>{
           ${2:// success}
         },
-        fail: function() {
+        fail: (error)=> {
           ${3:// fail}
         },
-        complete: function() {
+        complete: ()=> {
           ${4:// complete}
         }
       });
@@ -266,13 +266,13 @@
     'body': '''
     wx.navigateTo({
       url: '${1:String}',
-      success: function(res){
+      success: (res)=>{
         ${2:// success}
       },
-      fail: function() {
+      fail: (error)=> {
         ${3:// fail}
       },
-      complete: function() {
+      complete: ()=> {
         ${4:// complete}
       }
     })
@@ -284,13 +284,13 @@
     'body': '''
     wx.redirectTo({
       url: '${1:String}',
-      success: function(res){
+      success: (res)=>{
         ${2:// success}
       },
-      fail: function() {
+      fail: ()=> {
         ${3:// fail}
       },
-      complete: function() {
+      complete: ()=> {
         ${4:// complete}
       }
     })
@@ -302,13 +302,13 @@
     'body': """
       wx.switchTab({
         url: '/index',
-        success: function(res){
+        success: (res)=>{
           ${2:// success}
         },
-        fail: function() {
+        fail: ()=> {
           ${3:// fail}
         },
-        complete: function() {
+        complete: ()=> {
           ${4:// complete}
         }
       })
@@ -320,13 +320,13 @@
     'body': '''
       wx.navigateBack({
         delta: ${1:1}, ${2:// 回退前 delta(默认为1) 页面}
-        success: function(res){
+        success: (res)=>{
           ${3:// success}
         },
-        fail: function() {
+        fail: ()=> {
           ${4:// fail}
         },
-        complete: function() {
+        complete: ()=> {
           ${5:// complete}
         }
       });
@@ -338,13 +338,13 @@
     'body': """
       wx.reLaunch({
         url: 'test?id=1',
-        success: function(res){
+        success: (res)=>{
           ${2:// success}
         },
-        fail: function() {
+        fail: ()=> {
           ${3:// fail}
         },
-        complete: function() {
+        complete: ()=> {
           ${4:// complete}
         }
       })
@@ -360,7 +360,7 @@
         timingFunction: '${2:linear}', // "linear","ease","ease-in","ease-in-out","ease-out","step-start","step-end"
         delay: ${3:0},
         transformOrigin: '50% 50% 0',
-        success: function(res) {
+        success: (res)=> {
           ${4://function code}
         }
       })

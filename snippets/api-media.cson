@@ -8,13 +8,13 @@
         count: 9, // 最多可以选择的图片张数，默认9
         sizeType: ['original', 'compressed'], // original 原图，compressed 压缩图，默认二者都有
         sourceType: ['album', 'camera'], // album 从相册选图，camera 使用相机，默认二者都有
-        success: function(res){
+        success: (res)=>{
           // success
         },
-        fail: function() {
+        fail: ()=>{
           // fail
         },
-        complete: function() {
+        complete: ()=>{
           // complete
         }
       })
@@ -25,13 +25,13 @@
       wx.previewImage({
         // current: 'String', // 当前显示图片的链接，不填则默认为 urls 的第一张
         urls: [StringArray],
-        success: function(res){
+        success: (res)=>{
           // success
         },
-        fail: function() {
+        fail: ()=>{
           // fail
         },
-        complete: function() {
+        complete: ()=>{
           // complete
         }
       })
@@ -41,7 +41,7 @@
     'body': """
       wx.getImageInfo({
         src: '$1', // 图片的路径，可以是相对路径，临时文件路径，存储文件路径，网络图片路径
-        success: function (res) {
+        success: (res)=>{
           console.log(res.width,res.height,res.path,res.type);
         }
       })
@@ -69,13 +69,13 @@
     'prefix': 'wxstartRecord'
     'body': '''
     wx.startRecord({
-      success: function(res){
+      success: (res)=>{
         $1// success
       },
-      fail: function() {
+      fail: ()=>{
         $2// fail
       },
-      complete: function() {
+      complete: ()=>{
         $3// complete
       }
     })
@@ -84,13 +84,13 @@
     'prefix': 'wxstopRecord'
     'body': '''
     wx.stopRecord({
-      success: function(res){
+      success: (res)=>{
         $1// success
       },
-      fail: function() {
+      fail: ()=>{
         $2// fail
       },
-      complete: function() {
+      complete: ()=>{
         $3// complete
       }
     })
@@ -100,13 +100,13 @@
     'body': '''
     wx.playVoice({
       filePath: '${1: String}',
-      success: function(res){
+      success: (res)=>{
         $2// success
       },
-      fail: function() {
+      fail: ()=>{
         $3// fail
       },
-      complete: function() {
+      complete: ()=>{
         $4// complete
       }
     })
@@ -115,13 +115,13 @@
     'prefix': 'wxpauseVoice'
     'body': '''
     wx.pauseVoice({
-      success: function(res){
+      success: (res)=>{
         $1// success
       },
-      fail: function() {
+      fail: ()=>{
         $2// fail
       },
-      complete: function() {
+      complete: ()=>{
         $3// complete
       }
     })
