@@ -10,23 +10,39 @@
     'body': "'content-type':'multipart/form-data'"
   '发起网络请求':
     'prefix': 'wxrequest'
-    'body': '''
-    wx.request({
-      url: 'https://${1:URL}',
-      data: {},
-      method: '${2:GET}', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-      // header: {}, // 设置请求的 header
-      success: function(res){
-        ${3}// success
-      },
-      fail: function() {
-        ${4}// fail
-      },
-      complete: function() {
-        // complete
-      }
-    })
-    '''
+    'body': """
+      wx.request({
+        url: 'https://${1:URL}',
+        data: {},
+        method: '${2:GET}', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+        // header: {}, // 设置请求的 header
+        success: function(res){
+          ${3}// success
+        },
+        fail: function() {
+          ${4}// fail
+        },
+        complete: function() {
+          // complete
+        }
+      })
+    """
+  'Promise发起网络请求':
+    'prefix': 'wxprequest'
+    'body': """
+      Pro.request({
+        url: 'https://${1:URL}',
+        data: {},
+        method: '${2:GET}', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+        // header: {}, // 设置请求的 header
+      }).then((res)=>{
+        $3
+      },(error)=>{
+        console.log(error)
+      })
+    """
+    'description': ''
+    'descriptionMoreURL': ''
   '上传文件':
     'prefix': 'wxuploadFile'
     'body': '''
