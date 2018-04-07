@@ -1,13 +1,19 @@
 '.source.js':
   '发送 GET 请求的请求头设置':
     'prefix': 'wxgetheader'
-    'body': "'content-type':'application/json'"
+    'body': """
+      'content-type':'application/json'
+    """
   '发送 POST 请求的请求头设置':
     'prefix': 'wxpostheader'
-    'body': "'content-type':'application/x-www-form-urlencoded'"
+    'body': """
+      'content-type':'application/x-www-form-urlencoded'
+    """
   '上传文件请求的请求头设置':
     'prefix': 'wxfileheader'
-    'body': "'content-type':'multipart/form-data'"
+    'body': """
+      'content-type':'multipart/form-data'
+    """
   '发起网络请求':
     'prefix': 'wxrequest'
     'body': """
@@ -15,7 +21,7 @@
         url: 'https://${1:URL}',
         data: {},
         method: '${2:GET}', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-        // header: {}, // 设置请求的 header
+        // header: {} // 设置请求的 header
         success: function(res){
           ${3}// success
         },
@@ -27,22 +33,6 @@
         }
       })
     """
-  'Promise发起网络请求':
-    'prefix': 'wxprequest'
-    'body': """
-      Pro.request({
-        url: 'https://${1:URL}',
-        data: {},
-        method: '${2:GET}', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-        // header: {}, // 设置请求的 header
-      }).then((res)=>{
-        $3
-      },(error)=>{
-        console.log(error)
-      })
-    """
-    'description': ''
-    'descriptionMoreURL': ''
   '上传文件':
     'prefix': 'wxuploadFile'
     'body': '''
@@ -149,3 +139,20 @@
       // callback
     })
     '''
+  # wx.pro
+  'Promise发起网络请求':
+    'prefix': 'wxprequest'
+    'body': """
+      wx.pro.request({
+        url: 'https://${1:URL}',
+        data: {},
+        method: '${2:GET}', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+        // header: {} // 设置请求的 header
+      }).then((res)=>{
+        $3
+      },(error)=>{
+        console.log(error)
+      })
+    """
+    'description': '发起网络请求'
+    'descriptionMoreURL': 'https://developers.weixin.qq.com/miniprogram/dev/api/network-request.html#wxrequestobject'
