@@ -241,22 +241,23 @@
     '''
   '从相册选择视频，或者拍摄':
     'prefix': 'wxchooseVideo'
-    'body': '''
-    wx.chooseVideo({
-      sourceType: ['album', 'camera'], // album 从相册选视频，camera 使用相机拍摄
-      // maxDuration: 60, // 拍摄视频最长拍摄时间，单位秒。最长支持60秒
-      camera: ['front', 'back'],
-      success: function(res){
-        // success
-      },
-      fail: function() {
-        // fail
-      },
-      complete: function() {
-        // complete
-      }
-    })
-    '''
+    'body': """
+      wx.chooseVideo({
+        sourceType: ['album', 'camera'], // album 从相册选视频，camera 使用相机拍摄
+        compressed: true, // 是否压缩所选的视频源文件
+        // maxDuration: 60, // 拍摄视频最长拍摄时间，单位秒。最长支持60秒
+        camera: ['front', 'back'],
+        success: function(res){
+          // success
+        },
+        fail: function() {
+          // fail
+        },
+        complete: function() {
+          // complete
+        }
+      })
+    """
     '保存文件':
       'prefix': 'wx.saveFile'
       'body': '''
