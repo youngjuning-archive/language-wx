@@ -7,7 +7,7 @@
 	'contact-button':
 	  'prefix': 'contact-button'
 	  'body': """
-			<contact-button></contact-button>
+			<contact-button type="default-light${1:/default-dark}"></contact-button>
 	  """
 	  'description': '客服消息按钮'
 	  'descriptionMoreURL': 'http://www.sohu.com/a/193238869_603236'
