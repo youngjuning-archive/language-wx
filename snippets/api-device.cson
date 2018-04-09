@@ -58,3 +58,13 @@
     """
     'description': '设备->拨打电话'
     'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/phonecall.html'
+  # 用户截屏事件
+  '用户截屏事件':
+    'prefix': 'wxonUserCaptureScreen(CALLBACK)'
+    'body': """
+      wx.onUserCaptureScreen((res) =>{
+        console.log('用户截屏了')
+      })
+    """
+    'description': '监听用户主动截屏事件'
+    'descriptionMoreURL': 'https://developers.weixin.qq.com/miniprogram/dev/api/onUserCaptureScreen.html'
