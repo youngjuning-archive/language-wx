@@ -1,0 +1,18 @@
+# 文件
+'.source.js':
+  '保存文件':
+    'prefix': 'wxsaveFile'
+    'body': """
+      wx.saveFile({
+        tempFilePath: '${1: String}',
+        success: function(res){
+          $2// success
+        },
+        fail: function() {
+          $3// fail
+        },
+        complete: function() {
+          $4// complete
+        }
+      })
+    """

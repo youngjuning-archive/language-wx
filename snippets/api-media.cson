@@ -259,23 +259,6 @@
         }
       })
     """
-  # 保存文件
-  '保存文件':
-    'prefix': 'wx.saveFile'
-    'body': '''
-    wx.saveFile({
-      tempFilePath: '${1: String}',
-      success: function(res){
-        $2// success
-      },
-      fail: function() {
-        $3// fail
-      },
-      complete: function() {
-        $4// complete
-      }
-    })
-    '''
   # promise
   '从相册选择视频，或者拍摄(promise)':
     'prefix': 'wxchooseVideo'

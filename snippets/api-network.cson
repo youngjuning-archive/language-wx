@@ -141,7 +141,7 @@
     '''
   # wx.pro
   'Promise发起网络请求':
-    'prefix': 'wxprequest'
+    'prefix': 'wxprorequest'
     'body': """
       wx.pro.request({
         url: 'https://${1:URL}',
