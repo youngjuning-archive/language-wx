@@ -21,7 +21,7 @@
         url: 'https://${1:URL}',
         data: {},
         method: '${2:GET}', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-        // header: {} // 设置请求的 header
+        // header: {}, // 设置请求的 header
         success: function(res){
           ${3}// success
         },
@@ -71,6 +71,7 @@
       }
     })
     '''
+  # websocket  
   '创建 WebSocket 连接':
     'prefix': 'wxconnectSocket'
     'body': '''
