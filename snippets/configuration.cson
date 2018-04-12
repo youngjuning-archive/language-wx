@@ -26,16 +26,18 @@
         "backgroundColor": "#fff",
         "borderStyle":"white",
         "position":"bottom",
-        "list": [{
-          "pagePath": "pages/index/index",
-          "text": "首页",
-          "iconPath":"../img/a.png",
-          "selectedIconPath": "../img/a.png"
-        },
-        {
-          "pagePath": "pages/logs/logs",
-          "text": "日志"
-        }]
+        "list": [
+          {
+            "pagePath": "pages/index/index",
+            "text": "首页",
+            "iconPath":"../img/a.png",
+            "selectedIconPath": "../img/a.png"
+          },
+          {
+            "pagePath": "pages/logs/logs",
+            "text": "日志"
+          }
+        ]
       }
     """
   # networkTimeout
