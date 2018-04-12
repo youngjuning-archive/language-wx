@@ -1,0 +1,37 @@
+'.text.xml':
+  'ec-canvas组件':
+    'prefix': 'ec-canvas'
+    'body': """
+      <view class="ec-container">
+        <ec-canvas id="${1:ecid}" canvas-id="mychart-pie" ec="{{${2:ecdata}}}"></ec-canvas>
+      </view>
+    """
+    'description': '创建图表'
+    'descriptionMoreURL': 'https://github.com/ecomfe/echarts-for-weixin#%E5%88%9B%E5%BB%BA%E5%9B%BE%E8%A1%A8'
+'.source.js,javascript':
+  'echarts-for-weixin':
+    'prefix': 'echarts'
+    'body': """
+      import * as echarts from '../../components/ec-canvas/echarts'
+    """
+  '初始化设置函数':
+    'prefix': 'initChart'
+    'body': """
+      const initChart = (canvas, width, height) => {
+        const chart = echarts.init(canvas, null, {
+          width: width,
+          height: height
+        });
+        canvas.setChart(chart)
+
+        chart.setOption(option)
+        return chart
+      }
+    """
+    'ec.onInit':
+      'prefix': 'econInit'
+      'body': """
+        ec: {
+          onInit: initChart
+        }
+      """
