@@ -1,8 +1,6 @@
 # 微信小程序配置
 '.source.json':
-  '导航栏标题文字内容':
-    'prefix': 'navigationBarTitleText'
-    'body': '"navigationBarTitleText":"$1"'
+  # window
   '设置全局默认窗口的表现形式':
     'prefix': 'wxwindow'
     'body': """
@@ -15,19 +13,10 @@
         "onReachBottomDistance": 50
       }
     """
-  '设置页面默认窗口的表现形式(会覆盖全局配置)':
-    'prefix': 'wxpagewindow'
-    'body': """
-      {
-        "navigationBarTitleText": "${1:WeChat}",
-        "navigationBarBackgroundColor": "#000000",
-        "navigationBarTextStyle": "white",
-        "backgroundTextStyle": "dark",
-        "enablePullDownRefresh": false,
-        "disableScroll": false,
-        "onReachBottomDistance": 50
-      }
-    """
+  '导航栏标题文字内容':
+    'prefix': 'navigationBarTitleText'
+    'body': '"navigationBarTitleText":"$1"'
+  # tabbar
   '底部tab或者顶部tab的表现':
     'prefix': 'wxtabBar'
     'body': """
@@ -49,6 +38,7 @@
         }]
       }
     """
+  # networkTimeout
   '设置各种网络请求的超时时间':
     'prefix': 'wxnetworkTimeout'
     'body': """
@@ -59,6 +49,43 @@
         "downloadFile":"10000"
       }
     """
+  # debug
   '调试选项':
     'prefix': 'wxdebug'
     'body': '"debug": ${1:true} //项目上线后，建议关闭此项，或者不写此项,默认false'
+  # page
+  '设置页面默认窗口的表现形式(会覆盖全局配置)':
+    'prefix': 'wxpagewindow'
+    'body': """
+      {
+        "navigationBarTitleText": "${1:WeChat}",
+        "navigationBarBackgroundColor": "#000000",
+        "navigationBarTextStyle": "white",
+        "backgroundTextStyle": "dark",
+        "enablePullDownRefresh": false,
+        "disableScroll": false,
+        "onReachBottomDistance": 50
+      }
+    """
+  '使用自定义组件':
+    'prefix': 'usingComponents'
+    'body': """
+      {
+        "usingComponents": {
+          "${1:component name}": "${2:component path}"
+        }
+      }
+    """
+    'description': '使用自定义组件'
+    'descriptionMoreURL': 'https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/generics.html'
+  '使用插件的自定义组件':
+    'prefix': 'usingComponents'
+    'body': """
+      {
+        "usingComponents": {
+          "${1:component name}": "plugin://$1"
+        }
+      }
+    """
+    'description': '使用插件的自定义组件'
+    'descriptionMoreURL': 'https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/using.html'
