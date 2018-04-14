@@ -22,17 +22,23 @@
     'prefix': 'wxtabBar'
     'body': """
       "tabBar": {
-        "color": "#666666",
-        "selectedColor": "#CF3349",
+        "color":"#b3b3b3",
+        "selectedColor":"#1e1e1e",
         "backgroundColor": "#ffffff",
-        "borderStyle": "white",
-        "position": "bottom",
+        "borderStyle":"white",
+        "position":"bottom",
         "list": [
           {
             "pagePath": "pages/index/index",
             "text": "首页",
-            "iconPath": "../img/a.png",
-            "selectedIconPath": "../img/a.png"
+            "iconPath": "./assets/icon/home.png",
+            "selectedIconPath": "./assets/icon/home-hover.png"
+          },
+          {
+            "pagePath": "pages/index/index",
+            "text": "我的",
+            "iconPath": "./assets/icon/mine.png",
+            "selectedIconPath": "./assets/icon/mine-hover.png"
           }
         ]
       }
