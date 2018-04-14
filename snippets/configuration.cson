@@ -10,7 +10,7 @@
         "navigationBarTitleText": "Wechat",
         "backgroundColor": "#ffffff",
         "backgroundTextStyle": "dark",
-        "enablePullDownRefresh":false,
+        "enablePullDownRefresh": false,
         "onReachBottomDistance": 50
       }
     """
@@ -22,21 +22,17 @@
     'prefix': 'wxtabBar'
     'body': """
       "tabBar": {
-        "color":"#666666",
-        "selectedColor":"#CF3349",
-        "backgroundColor": "#fff",
-        "borderStyle":"white",
-        "position":"bottom",
+        "color": "#666666",
+        "selectedColor": "#CF3349",
+        "backgroundColor": "#ffffff",
+        "borderStyle": "white",
+        "position": "bottom",
         "list": [
           {
             "pagePath": "pages/index/index",
             "text": "首页",
-            "iconPath":"../img/a.png",
+            "iconPath": "../img/a.png",
             "selectedIconPath": "../img/a.png"
-          },
-          {
-            "pagePath": "pages/logs/logs",
-            "text": "日志"
           }
         ]
       }
@@ -48,8 +44,8 @@
       "networkTimeout": {
         "request": 10000,
         "downloadFile": 10000,
-        "uploadFile":"10000",
-        "downloadFile":"10000"
+        "uploadFile": "10000",
+        "downloadFile": "10000"
       }
     """
   # debug
