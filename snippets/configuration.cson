@@ -5,9 +5,10 @@
     'prefix': 'wxwindow'
     'body': """
       "window":{
-        "navigationBarTitleText": "${1:WeChat}",
         "navigationBarBackgroundColor": "#000000",
         "navigationBarTextStyle": "white",
+        "navigationBarTitleText": "Wechat",
+        "backgroundColor": "#ffffff",
         "backgroundTextStyle": "dark",
         "enablePullDownRefresh":false,
         "onReachBottomDistance": 50
