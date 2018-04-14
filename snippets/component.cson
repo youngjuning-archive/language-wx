@@ -54,18 +54,17 @@
     'prefix': 'swiper'
     'body': """
     	<!--请设置image的宽高100%、swiper默认宽100%，高150px，swiper-item默认宽高100%-->
-    	<swiper id="${1:banner}"
-    		indicator-dots="{{indicatorDots}}"
-    		autoplay="{{autoplay}}"
-    		interval="{{interval}}"
-    		duration="{{duration}}"
-    		circular="{{circular}}">
-    	  <block wx:for="{{banner}}">
-    	    <swiper-item item-id="{{item.objectid}}">
-  	        <image src="{{item.imgUrl}}" width="355" height="150"/>
-    	    </swiper-item>
-    	  </block>
-    	</swiper>
+			<swiper style="height:150px"
+			  indicator-dots="{{bannerOption.indicatorDots}}"
+			  autoplay="{{bannerOption.autoplay}}"
+			  interval="{{bannerOption.interval}}"
+			  duration="{{bannerOption.duration}}"
+			  circular="{{bannerOption.circular}}"
+			  vertical="{{bannerOption.vertical}}">
+			    <swiper-item wx:for="{{banner}}" wx:key="{{item.objectId}}" item-id="{{item.objectId}}">
+			      <image src="{{item.imgUrl}}"/>
+			    </swiper-item>
+			</swiper>
     """
     'description': '滑块视图容器'
     'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/swiper.html'
