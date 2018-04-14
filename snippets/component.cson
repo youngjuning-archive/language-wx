@@ -21,16 +21,18 @@
 	'视图容器->可横向滚动视图区域':
     'prefix': 'scroll-view-x'
     'body': """
-    	<scroll-view scroll-x="true" id="$1">
-    	<!--scroll-view 采用 flex是不起作用的，建议在 scroll-view里再套一层view，对这个view采用flex-->
-    	<view class="weui-flex">
-    		<!--wxss 设置子元素 flex: 1 0 50%;height: ...rpx-->
-    		<view style="background:green"></view>
-    		<view style="background:red"></view>
-    		<view style="background: yellow;"></view>
-    		<view style="background: blue;"></view>
-    	</view>
-    	</scroll-view>
+			<!--请设置image的宽高100%；swiper默认宽100%，高150px，swiper-item默认宽高100%-->
+			<swiper style="height:304rpx"
+			  indicator-dots="{{bannerOption.indicatorDots}}"
+			  autoplay="{{bannerOption.autoplay}}"
+			  interval="{{bannerOption.interval}}"
+			  duration="{{bannerOption.duration}}"
+			  circular="{{bannerOption.circular}}"
+			  vertical="{{bannerOption.vertical}}">
+				<swiper-item wx:for="{{banner}}" item-id="{{item.objectId}}">
+				  <image src="{{item}}"/>
+				</swiper-item>
+			</swiper>
     """
     'description': '可滚动视图区域'
     'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/scroll-view.html'
@@ -51,7 +53,7 @@
 	'视图容器->滑块视图容器':
     'prefix': 'swiper'
     'body': """
-    	<!--请设置navigator、image的宽高100%、swiper默认宽100%，高150px，swiper-item默认宽高100%-->
+    	<!--请设置image的宽高100%、swiper默认宽100%，高150px，swiper-item默认宽高100%-->
     	<swiper id="${1:banner}"
     		indicator-dots="{{indicatorDots}}"
     		autoplay="{{autoplay}}"
@@ -59,10 +61,8 @@
     		duration="{{duration}}"
     		circular="{{circular}}">
     	  <block wx:for="{{banner}}">
-    	    <swiper-item>
-    	      <navigator url="{{item.linkTo}}" hover-class="navigator-hover">
-    	        <image src="{{item.imgUrl}}" width="355" height="150"/>
-    	      </navigator>
+    	    <swiper-item item-id="{{item.objectid}}">
+  	        <image src="{{item.imgUrl}}" width="355" height="150"/>
     	    </swiper-item>
     	  </block>
     	</swiper>
@@ -271,3 +271,18 @@
 	'button->binderrror':
 	  'prefix': 'binderrror'
 	  'body': 'binderrror="handleError"'
+'.source.js,javascript':
+	'swiper组件配置项':
+	  'prefix': 'wxswiper'
+	  'body': """
+			bannerOption: {
+				indicatorDots: true, // 是否显示面板指示点
+				autoplay: true, // 是否自动切换
+				interval: 5000, // 自动切换时间间隔ms
+				duration: 1000, // 滑动动画时长ms
+				circular: true, // 是否采用衔接滑动,相当于loop
+				vertical: false // 滑动方向是否为纵向
+			}
+	  """
+	  'description': '滑块视图容器'
+	  'descriptionMoreURL': 'https://developers.weixin.qq.com/miniprogram/dev/component/swiper.html'
