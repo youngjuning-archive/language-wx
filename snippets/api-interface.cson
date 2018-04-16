@@ -351,6 +351,15 @@
     """
     'description': '界面->导航->关闭所有页面，打开到应用内的某个页面'
     'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/ui-navigate.html#wxrelaunchobject'
+  '退出小程序':
+    'prefix': 'wxcloseApp'
+    'body': """
+      wx.navigateBack({
+        delta: -1
+      })
+    """
+    'description': '代码时光'
+    'descriptionMoreURL': 'http://www.wakeuptocode.me'
   # 动画
   '动画':
     'prefix': 'wxcreateAnimation'
