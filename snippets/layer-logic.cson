@@ -13,7 +13,7 @@
     'prefix': 'thissetData'
     'body': """
       this.setData({
-        ${1:// 这次要改变的数据}
+        $1
       })
     """
     'description': '逻辑层->注册页面'
