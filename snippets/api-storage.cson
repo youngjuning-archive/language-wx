@@ -1,21 +1,21 @@
-'.source.js':
+'.source.js,javascript':
   '异步设置本地数据缓存':
     'prefix': 'wxsetStorage'
-    'body': '''
-    wx.setStorage({
-      key: '${1: String}',
-      data: Object/String,
-      success: function(res){
-        $2// success
-      },
-      fail: function() {
-        $3// fail
-      },
-      complete: function() {
-        $4// complete
-      }
-    })
-    '''
+    'body': """
+      wx.setStorage({
+        key: '${1:String}',
+        data: Object/String,
+        success: function(res){
+          $2// success
+        },
+        fail: function() {
+          $3// fail
+        },
+        complete: function() {
+          $4// complete
+        }
+      })
+    """
     'description': '数据缓存->异步设置本地数据缓存'
     'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/data.html#wxsetstorageobject'
   '同步设置本地数据缓存':
@@ -114,3 +114,18 @@
     """
     'description': '数据缓存->同步清理本地数据缓存'
     'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/data.html#wxclearstoragesync'
+  # wxPromise
+  '异步设置本地数据缓存(promise)':
+    'prefix': 'wxprosetStorage'
+    'body': """
+      wx.pro.setStorage({
+        key: '${1:String}',
+        data: Object/String
+      }).then(res => {
+        $2
+      },err => {
+        console.log(err)
+      })
+    """
+    'description': '数据缓存->异步设置本地数据缓存'
+    'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/data.html#wxsetstorageobject'
