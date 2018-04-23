@@ -1,4 +1,4 @@
-'.source.js':
+'.source.js,javascript':
   '登录':
     'prefix': 'wxlogin'
     'body': '''
@@ -49,3 +49,11 @@
       }
     })
     '''
+'arguments':
+  'withCredentials':
+    'prefix': 'withCredentials'
+    'body': """
+      withCredentials : ${true/false}
+    """
+    'description': '是否带上登录态信息'
+    'descriptionMoreURL': 'https://developers.weixin.qq.com/miniprogram/dev/api/open.html'
