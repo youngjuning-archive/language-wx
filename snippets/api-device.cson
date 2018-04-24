@@ -1,4 +1,4 @@
-'.source.js':
+'.source.js,javascript':
   # 系统信息
   '异步获取系统信息':
     'prefix': 'wxgetSystemInfo'
@@ -19,13 +19,35 @@
   # 网络状态
   '获取网络类型':
     'prefix': 'wxgetNetworkType'
-    'body': '''
-    wx.getNetworkType({
-      success: (res)=> {
-        ${1:// success}
-      }
-    })
-    '''
+    'body': """
+      wx.getNetworkType({
+        success: (res)=> {
+          ${1:// success}
+        }
+      })
+    """
+    'description': '设备->系统信息->同步获取系统信息'
+    'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/systeminfo.html#wxgetsysteminfoobject'
+  '监听网络状态变化':
+    'prefix': 'wxonNetworkStatusChange'
+    'body': """
+      wx.onNetworkStatusChange(res => {
+        console.log(res.isConnected) // 当前是否有网络连接
+        console.log(res.networkType) // 网络类型
+      })
+    """
+    'description': ''
+    'descriptionMoreURL': ''
+  # 网络状态pro
+  '获取网络类型':
+    'prefix': 'wxprogetNetworkType'
+    'body': """
+      wx.pro.getNetworkType().then(res => {
+        console.log(res.networkType)
+      },err => {
+        console.log(err)
+      })
+    """
     'description': '设备->系统信息->同步获取系统信息'
     'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/systeminfo.html#wxgetsysteminfoobject'
   # 加速度计
