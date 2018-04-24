@@ -39,7 +39,7 @@
     'description': ''
     'descriptionMoreURL': ''
   # 网络状态pro
-  '获取网络类型':
+  '获取网络类型pro':
     'prefix': 'wxprogetNetworkType'
     'body': """
       wx.pro.getNetworkType().then(res => {
