@@ -25,6 +25,11 @@
 		"""
 		'description': '逻辑层->注册页面'
 		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/framework/app-service/page.html'
+	'获取上一个页面的实例':
+	  'prefix': 'wxprevPage'
+	  'body': """
+	    let prevPage = currentPages[currentPages.length - 2];
+	  """
 	'为当前页面添加方法':
     'prefix': 'assign'
     'body': '.assign({},$1,$2)'
