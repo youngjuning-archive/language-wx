@@ -21,18 +21,17 @@
 	'视图容器->可横向滚动视图区域':
     'prefix': 'scroll-view-x'
     'body': """
-			<!--请设置image的宽高100%；swiper默认宽100%，高150px，swiper-item默认宽高100%-->
-			<swiper style="height:304rpx"
-			  indicator-dots="{{bannerOption.indicatorDots}}"
-			  autoplay="{{bannerOption.autoplay}}"
-			  interval="{{bannerOption.interval}}"
-			  duration="{{bannerOption.duration}}"
-			  circular="{{bannerOption.circular}}"
-			  vertical="{{bannerOption.vertical}}">
-				<swiper-item wx:for="{{banner}}" item-id="{{item.objectId}}">
-				  <image src="{{item}}"/>
-				</swiper-item>
-			</swiper>
+			<!--1.设置滚动视图容器white-space: nowrap;-->
+			<scroll-view scroll-x="true" id="$1">
+				<!--2. 设置滚动项display：inline-block;-->
+				<!--3. 滚动项不要用float-->
+			  <view style="background:green"></view>
+			  <view style="background:red"></view>
+			  <view style="background:white"></view>
+			  <view style="background:yellow"></view>
+			  <view style="background:pink"></view>
+			  <view style="background:blue"></view>
+			</scroll-view>
     """
     'description': '可滚动视图区域'
     'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/scroll-view.html'
