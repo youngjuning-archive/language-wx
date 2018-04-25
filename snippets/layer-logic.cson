@@ -20,7 +20,9 @@
     'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/framework/app-service/page.html'
 	'获取当前页面栈的实例':
 		'prefix': 'wxgetcurrentpages'
-		'body': '//获取当前页面栈的实例\nconst currentPages = getCurrentPages()'
+		'body': """
+			const currentPages = getCurrentPages()
+		"""
 		'description': '逻辑层->注册页面'
 		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/framework/app-service/page.html'
 	'为当前页面添加方法':
