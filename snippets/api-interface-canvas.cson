@@ -10,7 +10,7 @@
 	'绘制图像到画布':
 	  'prefix': 'ctxdrawImage'
 	  'body': """
-			ctx.drawImage('${1:imageResource}',${2:0},${3:0},${4:systemInfo.windowWidth},${5:systemInfo.windowHeight});
+			ctx.drawImage('${1:imageResource}',${2:0},${3:0},${4:systemInfo.windowWidth},${5:systemInfo.windowHeight})
 	  """
 	  'description': '界面->绘图->绘制图像到画布'
 	  'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/api/canvas/draw-image.html'
