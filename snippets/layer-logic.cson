@@ -28,12 +28,12 @@
 	'获取当前页面的实例':
 		'prefix': 'wxcurPage'
 		'body': """
-			let curPage = currentPages[currentPages.length - 1];
+			let curPage = currentPages[currentPages.length - 1]
 		"""
 	'获取上一个页面的实例':
 		'prefix': 'wxprevPage'
 		'body': """
-			let prevPage = currentPages[currentPages.length - 2];
+			let prevPage = currentPages[currentPages.length - 2]
 		"""
 	'为当前页面添加方法':
 		'prefix': 'assign'
