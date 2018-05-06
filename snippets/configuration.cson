@@ -14,9 +14,27 @@
         "onReachBottomDistance": 50
       }
     """
+  '导航栏背景颜色':
+    'prefix': 'navigationBarBackgroundColor'
+    'body': '"navigationBarBackgroundColor":"${1:#000000}"'
+  '导航栏标题颜色':
+    'prefix': 'navigationBarTextStyle'
+    'body': '"navigationBarTextStyle":"${1:dark/white}"'
   '导航栏标题文字内容':
     'prefix': 'navigationBarTitleText'
     'body': '"navigationBarTitleText":"$1"'
+  '导航栏样式':
+    'prefix': 'navigationStyle'
+    'body': '"navigationStyle":"${1:default/custom}"'
+  '窗口的背景色':
+    'prefix': 'backgroundColor'
+    'body': '"backgroundColor":"${1:#ffffff}"'
+  '下拉 loading 的样式':
+    'prefix': 'backgroundTextStyle'
+    'body': '"backgroundTextStyle":"${1:dark/light}"'
+  '是否开启下拉刷新':
+    'prefix': 'enablePullDownRefresh'
+    'body': '"enablePullDownRefresh":"${1:true/false}"'
   # tabbar
   '底部tab或者顶部tab的表现':
     'prefix': 'wxtabBar'
