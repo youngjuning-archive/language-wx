@@ -84,7 +84,7 @@
     'description': '使用自定义组件'
     'descriptionMoreURL': 'https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/generics.html'
   '使用插件的自定义组件':
-    'prefix': 'usingComponents'
+    'prefix': 'usingpluginComponents'
     'body': """
       {
         "usingComponents": {
