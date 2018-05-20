@@ -182,6 +182,21 @@
 	  """
 	  'description': 'canvas'
 	  'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/component/canvas.html#canvas'
+	# 开放能力
+	'open-data':
+	  'prefix': 'open-data'
+	  'body': """
+			<open-data type="${1:userNickName/userAvatarUrl/userGender/userCity/userProvince/userCountry/userLanguage}"></open-data>
+	  """
+	  'description': '用于展示微信开放的数据'
+	  'descriptionMoreURL': 'https://developers.weixin.qq.com/miniprogram/dev/component/open-data.html'
+	'web-view':
+	  'prefix': 'web-view'
+	  'body': """
+			<web-view src="$1"></web-view>
+	  """
+	  'description': '一个可以用来承载网页的容器'
+	  'descriptionMoreURL': 'https://developers.weixin.qq.com/miniprogram/dev/component/web-view.html'
 	# 扩展
 	'图标-iconfont':
 		'prefix': 'iconfont'
