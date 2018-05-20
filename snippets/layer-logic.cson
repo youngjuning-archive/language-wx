@@ -1,7 +1,7 @@
 '.source.js':
 	'获取程序实例':
 		'prefix': 'wxgetapp'
-		'body': 'const App = getApp()'
+		'body': 'const app = getApp()'
 		'description': '逻辑层->注册程序'
 		'descriptionMoreURL': 'https://mp.weixin.qq.com/debug/wxadoc/dev/framework/app-service/app.html'
 	'获取到当前页面的路径':
